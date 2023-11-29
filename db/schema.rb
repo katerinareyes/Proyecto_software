@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_27_200004) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_28_180937) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -76,10 +77,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_27_200004) do
   create_table "resenas", force: :cascade do |t|
     t.integer "calificacion"
     t.text "comentario"
-    t.bigint "user_id", null: false
+    t.bigint "usuario_creador_id", null: false
+    t.bigint "usuario_receptor_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_resenas_on_user_id"
+    t.index ["usuario_creador_id"], name: "index_resenas_on_usuario_creador_id"
+    t.index ["usuario_receptor_id"], name: "index_resenas_on_usuario_receptor_id"
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string "name"
+    t.boolean "is_private"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "solicituds", force: :cascade do |t|
@@ -105,7 +115,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_27_200004) do
     t.string "nombre"
     t.integer "telefono"
     t.string "descripcion"
-    t.integer "rol"
+    t.integer "rol", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -114,12 +124,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_27_200004) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "juegos", "users"
   add_foreign_key "libros", "users"
-<<<<<<< HEAD
-  add_foreign_key "messages", "rooms"
-  add_foreign_key "messages", "users"
-=======
   add_foreign_key "resenas", "users", column: "usuario_creador_id"
   add_foreign_key "resenas", "users", column: "usuario_receptor_id"
-
->>>>>>> origin/main
 end

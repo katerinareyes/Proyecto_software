@@ -8,26 +8,7 @@
 </head>
 <body>
     <main>
-        <header>
-        </header>
-        <section id="encabezado">
-            <h1 id="title">C⃣   a⃣   m⃣   b⃣   i⃣   a⃣   L⃣   i⃣   b⃣   r⃣   o⃣   s⃣</h1>
-            
-            <ul class="menu">
-                <li><%= link_to "Inicio", "/pages", class: 'btn primary'%></li>
-                <li><%= link_to "Libros", libros_index_path(current_user.id), class: 'btn primary'%></li>
-                <li><%= link_to "Juegos", juegos_index_path(current_user.id), class: 'btn primary'%></li>
-                <li><%= link_to "Inventario", users_show_productos_path(current_user.id) , class: 'btn primary'%></li>
-                <li><%= link_to "Publicar libro", libros_new_path(current_user.id), class: 'btn primary'%></li>
-                <li><%= link_to "Publicar juego", juegos_new_path(current_user.id) , class: 'btn primary'%></li>
-                <li><%= link_to "Solicitudes Pendientes", solicituds_index_pendientes_path(current_user.id), class: 'btn primary'%></li>
-                <li><%= link_to "Historial de Solicitudes", solicituds_index_ar_path(current_user.id), class: 'btn primary'%></li>
-                <li><%= link_to "Tus Reseñas", resenas_index_path(current_user.id), class: "btn primary"%></li>
-                <li><%= link_to "Soporte", "/soporte" , class: 'btn primary'%></li>
-                <li><%= link_to "Tu Cuenta", users_show_path(current_user.id), class: 'btn primary'%></li>
-            </ul>
-        </section>
-       
+        <%= render 'shared/header-chico' %>
         <section>
             <section class="seccion-subtitulo">
             <h2 id="subtitulo">Editar Reseña</h2>

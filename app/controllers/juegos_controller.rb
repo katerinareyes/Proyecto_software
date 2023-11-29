@@ -20,7 +20,7 @@ class JuegosController < ApplicationController
       juegos_search = Juego.where(disponibilidad: "Disponible").where('estado ilike ?', "%#{params[:estado]}%")
       render(partial: "juegos_disponibles", locals:{juegos_disponibles: juegos_search})
     else
-      redirect_to action: "index", status: :see_other
+      redirect_to action: "index", user_id: current_user.id, status: :see_other
     end
   end
 
@@ -66,7 +66,7 @@ class JuegosController < ApplicationController
   def destroy
     @juego = Juego.find(params[:juego_id])
     @juego.destroy
-    redirect_to action: "index", status: :see_other
+    redirect_to users_show_productos_path(current_user.id), status: :see_other
   end
 
    # GET /juegos/:juego_id/:user_dueno_id

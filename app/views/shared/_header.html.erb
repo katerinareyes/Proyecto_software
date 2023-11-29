@@ -16,26 +16,29 @@
             <nav class="navbar">
                 <ul>
                     <li class="opcion"><p><%= link_to_unless(current_user.nil?, "Inicio", "/pages", class:'btn primary') %></p></li>
-                    <li class="opcion"><p><%= link_to_unless(current_user.nil?, "Productos", libros_index_path(current_user.id), class: 'btn primary')%></p>
+                    <li class="opcion"><p><%= link_to_unless(current_user.nil?, "Productos", class: 'btn primary')%></p>
                         <ul>
                             <li class="sub-opcion"><p><%= link_to_unless(current_user.nil?, "Libros", libros_index_path(current_user.id), class: 'btn primary')%></p></li>
                             <li class="sub-opcion"><p><%= link_to_unless(current_user.nil?, "Juegos", juegos_index_path(current_user.id), class: 'btn primary')%></p></li>
-                            <li class="sub-opcion"><p><%= link_to "Inventario", users_show_productos_path(current_user.id) , class: 'btn primary'%></p></li>
                         </ul>
                     </li>
-                    <li class="opcion"><p><%= link_to "Publicar", libros_new_path(current_user.id), class: 'btn primary'%></p>
+                    <li class="opcion"><p><%= link_to "Inventario", users_show_productos_path(current_user.id) , class: 'btn primary'%></p></li>
+                    <li class="opcion"><p><%= link_to "Publicar", class: 'btn primary'%></p>
                         <ul>
                             <li><p><%= link_to "Libro", libros_new_path(current_user.id), class: 'btn primary'%></p></li>
-                            <li><p><%= link_to "Juego", juegos_new_path(current_user.id) , class: 'btn primary'%><p/></li>
+                            <li><p><%= link_to "Juego", juegos_new_path(current_user.id) , class: 'btn primary'%></p></li>
                         </ul>
                     </li>
-                    <li class="opcion"><p><%= link_to "Solicitudes", libros_new_path(current_user.id), class: 'btn primary'%></p>
+                    <li class="opcion"><p><%= link_to "Solicitudes",  class: 'btn primary'%></p>
                         <ul>
                             <li><%= link_to "Pendientes", solicituds_index_pendientes_path(current_user.id), class: 'btn primary'%></li>
                             <li><%= link_to "Historial", solicituds_index_ar_path(current_user.id), class: 'btn primary'%></li>
                         </ul>
                     </li>
+                    <li class="opcion"><p><%= link_to "Tus Reseñas", resenas_index_path(current_user.id), class: "btn primary"%></p></li>
                     <li class="opcion"><p><%= link_to_unless(current_user.nil?, "Soporte", "/soporte", class: 'btn primary')%></p></li>
+                    <li class="opcion"><p><%= link_to "Tu Cuenta", users_show_path(current_user.id), class: 'btn primary'%></p></li>
+                    <li class="opcion"><p><%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete%></p></li>
                 </ul>
             </nav>
         </div>
@@ -53,6 +56,5 @@
                 los juegos de mesa se conecten, intercambien tesoros y expandan 
                 sus colecciones de una manera única y emocionante.
             </p>
-            <a href="#" class="btn-1">Informacion</a>
         </div>
 </header>

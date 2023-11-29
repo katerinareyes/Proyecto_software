@@ -6,14 +6,14 @@
     <title>CambiaLibros</title>
 </head>
 <body>
-    <%= render 'shared/header' %>
+    <%= render 'shared/header-chico' %>
 
 
     <main>
         <section class="seccion-subtitulo">
             <h2 id="subtitulo">Libros Disponibles</h2>
         </section>
-        <div>
+        <div class="div2">
             <%= render "libros_disponibles", libros_disponibles: @libros_disponibles %>
         </div>
         

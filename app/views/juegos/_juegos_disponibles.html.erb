@@ -32,12 +32,7 @@
                 <div class="subcaja"><%= juego_disponible.descripcion %></div>
                 <div class="subcaja">Te interesa?</div>
                 <div class="subcaja"><%= link_to "Ver Juego", juegos_mostrar_path(juego_disponible, juego_disponible.user.id), data:{turbo:"false"}, class: 'btn-2'%></div>
-                <% if can?(:update, juego_disponible) %>
-                    <div class="subcaja"><%= link_to 'Editar', edit_juego_disponible_path(juego_disponible), class: 'btn-editar' %></div>
-                <% end %>                
-                <% if can?(:destroy, juego_disponible) %>
-                    <div class="subcaja"><%= link_to 'Eliminar', juego_disponible, method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'btn-eliminar' %></div>
-                <% end %>
+
             </div>    
             <% end %>
             

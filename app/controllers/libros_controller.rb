@@ -20,7 +20,7 @@ class LibrosController < ApplicationController
       libros_search = Libro.where(disponibilidad: "Disponible").where('estado ilike ?', "%#{params[:estado]}%")
       render(partial: "libros_disponibles", locals:{libros_disponibles: libros_search})
     else
-      redirect_to action: "index", status: :see_other
+      redirect_to action: "index",  user_id: current_user.id, status: :see_other
     end
   end 
 
@@ -67,7 +67,7 @@ class LibrosController < ApplicationController
   def destroy
     @libro = Libro.find(params[:libro_id])
     @libro.destroy
-    redirect_to action: "index", status: :see_other
+    redirect_to users_show_productos_path(current_user.id), status: :see_other
   end
 
    # GET /libros/:libro_id/:user_dueno_id

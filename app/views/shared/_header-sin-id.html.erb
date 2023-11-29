@@ -5,24 +5,27 @@
             <label for="logo-icono">
                 <%= image_tag('portadainicio.png', alt: 'Portada de Inicio', class: 'icono') %>
             </label>
-
-            <input type="checkbox" id="menu" />
-            <label for="menu" id="label-menu">
-                <img src="imagenes/menu.png" class="menu-icono" alt="">
-            </label>
             <nav class="navbar">
-                <ul>
-                    <li class="opcion"><p><%= link_to_unless(current_user.nil?, "Inicio", "/pages", class:'btn primary') %></p></li>
-                    <li class="opcion"><p><%= link_to_unless(current_user.nil?, "Productos", libros_index_sin_sesion_path, class: 'btn primary')%></p>
-                        <ul>
-                            <li class="sub-opcion"><p><%= link_to_unless(current_user.nil?, "Libros", libros_index_sin_sesion_path, class: 'btn primary')%></p></li>
-                            <li class="sub-opcion"><p><%= link_to_unless(current_user.nil?, "Juegos", juegos_index_sin_sesion_path, class: 'btn primary')%></p></li>
-                            
-                        </ul>
-                    </li>
-                    
-                    <li class="opcion"><p><%= link_to_unless(current_user.nil?, "Soporte", "/soporte", class: 'btn primary')%></p></li>
-                </ul>
+            <ul>
+                <li class="opcion"><%= link_to("Inicia sesión", new_user_session_path , class: 'btn primary')%></li>
+                <li class="opcion"><%= link_to("Registrate", new_user_registration_path, class: 'btn primary' )%></li>
+                <% if flash[:notice] %>
+                    <li><p class="notice"><%= flash[:notice] %></p></li>
+                <% end %>
+
+                <% if flash[:alert] %>
+                    <li><p class="alert"><%= flash[:alert] %></p></li>
+                <% end %>
+
+            </ul>
+            </nav>
+            
+            <input type="checkbox" id="menu" />
+            <nav class="navbar">
+                <li class="opcion"><p><%= link_to("Inicio", "/", class:'btn primary') %></p></li>
+                <li class="opcion"><p><%= link_to("Libros", libros_index_sin_sesion_path, class: 'btn primary')%></p></li>
+                <li class="opcion"><p><%= link_to("Juegos", juegos_index_sin_sesion_path, class: 'btn primary')%></p></li>
+                
             </nav>
         </div>
 
@@ -37,6 +40,5 @@
                 los juegos de mesa se conecten, intercambien tesoros y expandan 
                 sus colecciones de una manera única y emocionante.
             </p>
-            <a href="#" class="btn-1">Informacion</a>
         </div>
 </header>

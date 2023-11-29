@@ -33,12 +33,6 @@
                 <div class="subcaja"><%=libro_disponible.descripcion %></div>
                 <div class="subcaja">Te interesa?</div>
                 <div class="subcaja"><%= link_to "Ver Libro", libros_mostrar_path(libro_disponible, libro_disponible.user.id), data:{turbo:"false"}, class: 'btn-2'%></div>
-                <% if can?(:update, libro_disponible) %>
-                    <div class="subcaja"><%= link_to 'Editar', edit_libro_disponible_path(libro_disponible), class: 'btn-editar' %></div>
-                <% end %>
-                <% if can?(:destroy, libro_disponible) %>
-                    <div class="subcaja"><%= link_to 'Eliminar', libro_disponible, method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'btn-eliminar' %></div>
-                <% end %>
                 
             </div> 
             
