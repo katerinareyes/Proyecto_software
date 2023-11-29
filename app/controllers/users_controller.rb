@@ -26,15 +26,30 @@ class UsersController < ApplicationController
   def destroy
     if current_user.nil? == false
       user = current_user
+      solicitudes = Solicitud.all
       juegos = user.juegos
       for juego in juegos do
+        for solicitud in solicitudes do
+          if solicitud.solicitable_type == "Juego" && solicitud.solicitable_id == juego.id
+            solicitud.destroy
+          elsif solicitud.ofreciable_type == "Juego" && solicitud.ofreciable_id == juego.id
+            solicitud.destroy
+          end 
+        end
         if juego.disponibilidad == "Disponible"
-          
           juegos.destroy
         end
       end
       libros = user.libros
       for libro in libros do
+        for solicitud in solicitudes do
+          if solicitud.solicitable_type == "Libro" && solicitud.solicitable_id == libro.id
+            solicitud.destroy
+          elsif solicitud.ofreciable_type == "Libro" && solicitud.ofreciable_id == libro.id
+            solicitud.destroy
+          end 
+        end
+
         if libro.disponibilidad == "Disponible"
           libro.destroy
         end
