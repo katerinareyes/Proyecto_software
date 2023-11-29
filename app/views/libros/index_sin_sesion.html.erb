@@ -7,17 +7,7 @@
 </head>
 <body>
     <main>
-        <header>
-        </header>
-        <section id="encabezado">
-            <h1 id="title">C⃣   a⃣   m⃣   b⃣   i⃣   a⃣   L⃣   i⃣   b⃣   r⃣   o⃣   s⃣</h1>
-            <ul class="menu">
-                <li><p><%= link_to("Inicio", "/", class:'btn primary') %></p></li>
-                <li><p><%= link_to("Libros", libros_index_sin_sesion_path, class: 'btn primary')%></p></li>
-                <li><p><%= link_to("Juegos", juegos_index_sin_sesion_path, class: 'btn primary')%></p></li>
-            </ul>
-        </section>
-    
+    <%= render 'shared/header-sin-id' %>
         <section class="seccion-subtitulo">
             <h2 id="subtitulo">Libros Disponibles</h2>
         </section>

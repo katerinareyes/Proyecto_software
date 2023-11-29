@@ -46148,3 +46148,555 @@ ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
   
 ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
   
+Started GET "/login" for 127.0.0.1 at 2023-11-29 14:37:01 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 577)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2752)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 672)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 7994)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 10211)
+
+
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:37:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:37:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:37:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/register" for 127.0.0.1 at 2023-11-29 14:37:04 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 249)
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 646)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 5478)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 677)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 10739)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 13316)
+
+
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:37:04 -0300
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:37:04 -0300
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:37:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-29 14:37:14 -0300
+Processing by PagesController#inicial as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicial.html.erb within layouts/application
+  Rendered shared/_header-sin-id.html.erb (Duration: 2.9ms | Allocations: 1485)
+  Rendered pages/inicial.html.erb within layouts/application (Duration: 7.5ms | Allocations: 5716)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 10305)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 11395)
+
+
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:37:14 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:37:14 -0300
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:37:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-29 14:37:42 -0300
+Processing by PagesController#inicial as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicial.html.erb within layouts/application
+  Rendered shared/_header-sin-id.html.erb (Duration: 1.8ms | Allocations: 1142)
+  Rendered pages/inicial.html.erb within layouts/application (Duration: 5.0ms | Allocations: 4901)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 9462)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 10550)
+
+
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:37:42 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:37:42 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:37:42 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-29 14:39:12 -0300
+Processing by PagesController#inicial as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicial.html.erb within layouts/application
+  Rendered shared/_header-sin-id.html.erb (Duration: 1.2ms | Allocations: 1134)
+  Rendered pages/inicial.html.erb within layouts/application (Duration: 3.9ms | Allocations: 4905)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 9494)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 10604)
+
+
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:39:12 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:39:12 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:39:12 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+Started GET "/libros" for 127.0.0.1 at 2023-11-29 14:39:13 -0300
+Processing by LibrosController#index_sin_sesion as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering libros/index_sin_sesion.html.erb within layouts/application
+  [1m[36mLibro Load (0.8ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."disponibilidad" = $1[0m  [["disponibilidad", "Disponible"]]
+  ↳ app/views/libros/index_sin_sesion.html.erb:27
+  Rendered libros/index_sin_sesion.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2718)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 638)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 8086)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.8ms | Allocations: 9661)
+
+
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:39:13 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:39:13 -0300
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:39:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-29 14:39:17 -0300
+Processing by PagesController#inicial as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicial.html.erb within layouts/application
+  Rendered shared/_header-sin-id.html.erb (Duration: 2.2ms | Allocations: 1151)
+  Rendered pages/inicial.html.erb within layouts/application (Duration: 5.8ms | Allocations: 4918)
+  Rendered shared/_footer.html.erb (Duration: 0.9ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 9507)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 10621)
+
+
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:39:17 -0300
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:39:17 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:39:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+Started GET "/" for 127.0.0.1 at 2023-11-29 14:40:51 -0300
+Processing by PagesController#inicial as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicial.html.erb within layouts/application
+  Rendered shared/_header-sin-id.html.erb (Duration: 1.9ms | Allocations: 1754)
+  Rendered pages/inicial.html.erb within layouts/application (Duration: 5.3ms | Allocations: 6023)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 581)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 11098)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 12772)
+
+
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:40:51 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:40:51 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:40:51 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/libros" for 127.0.0.1 at 2023-11-29 14:40:52 -0300
+Processing by LibrosController#index_sin_sesion as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering libros/index_sin_sesion.html.erb within layouts/application
+  Rendered shared/_header-sin-id.html.erb (Duration: 2.9ms | Allocations: 1415)
+  [1m[36mLibro Load (0.3ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."disponibilidad" = $1[0m  [["disponibilidad", "Disponible"]]
+  ↳ app/views/libros/index_sin_sesion.html.erb:17
+  Rendered libros/index_sin_sesion.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4385)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 422)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 9082)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 10656)
+
+
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:40:52 -0300
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:40:52 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:40:52 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+Started GET "/juegos" for 127.0.0.1 at 2023-11-29 14:40:58 -0300
+Processing by JuegosController#index_sin_sesion as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering juegos/index_sin_sesion.html.erb within layouts/application
+  Rendered shared/_header-sin-id.html.erb (Duration: 1.1ms | Allocations: 1438)
+  [1m[36mJuego Load (0.3ms)[0m  [1m[34mSELECT "juegos".* FROM "juegos" WHERE "juegos"."disponibilidad" = $1[0m  [["disponibilidad", "Disponible"]]
+  ↳ app/views/juegos/index_sin_sesion.html.erb:17
+  Rendered juegos/index_sin_sesion.html.erb within layouts/application (Duration: 4.4ms | Allocations: 4792)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 422)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 9461)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.3ms | Allocations: 11033)
+
+
+Started GET "/register" for 127.0.0.1 at 2023-11-29 14:41:09 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 217)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 572)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 4616)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 669)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 9840)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 12324)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-11-29 14:41:14 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 167)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2292)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 669)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 7502)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 9705)
+
+
+Started GET "/register" for 127.0.0.1 at 2023-11-29 14:41:18 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2890)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 631)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 7908)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 9481)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-11-29 14:41:33 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 154)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1745)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 628)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 6725)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 8267)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-11-29 14:41:37 -0300
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"kate@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar sesión"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/pages.1
+Completed 303 See Other in 187ms (ActiveRecord: 0.5ms | Allocations: 3774)
+
+
+Started GET "/pages.1" for 127.0.0.1 at 2023-11-29 14:41:38 -0300
+Processing by PagesController#inicio as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `inicio'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicio.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.3ms | Allocations: 2244)
+  Rendered pages/inicio.html.erb within layouts/application (Duration: 5.9ms | Allocations: 6524)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 11085)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 14067)
+
+
+Started GET "/pages.1" for 127.0.0.1 at 2023-11-29 14:41:38 -0300
+Processing by PagesController#inicio as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `inicio'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicio.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 1712)
+  Rendered pages/inicio.html.erb within layouts/application (Duration: 4.9ms | Allocations: 5472)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 422)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 10039)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 12943)
+
+
+Started GET "/imagenes/menu.png" for 127.0.0.1 at 2023-11-29 14:41:38 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:41:38 -0300
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:41:38 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:41:38 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/menu.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/pages.1" for 127.0.0.1 at 2023-11-29 14:43:22 -0300
+Processing by PagesController#inicio as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `inicio'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicio.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.5ms | Allocations: 1713)
+  Rendered pages/inicio.html.erb within layouts/application (Duration: 6.8ms | Allocations: 5472)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 10054)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.3ms | Allocations: 12973)
+
+
+Started GET "/imagenes/menu.png" for 127.0.0.1 at 2023-11-29 14:43:22 -0300
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:43:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/menu.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:43:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:43:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/pages.1" for 127.0.0.1 at 2023-11-29 14:44:00 -0300
+Processing by PagesController#inicio as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `inicio'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicio.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1716)
+  Rendered pages/inicio.html.erb within layouts/application (Duration: 4.1ms | Allocations: 5487)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 17617)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.4ms | Allocations: 20528)
+
+
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:44:00 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:44:00 -0300
+Started GET "/imagenes/menu.png" for 127.0.0.1 at 2023-11-29 14:44:00 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/menu.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:44:00 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/pages.1" for 127.0.0.1 at 2023-11-29 14:44:10 -0300
+Processing by PagesController#inicio as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `inicio'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicio.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.2ms | Allocations: 2469)
+  Rendered pages/inicio.html.erb within layouts/application (Duration: 4.8ms | Allocations: 6780)
+  Rendered shared/_footer.html.erb (Duration: 1.0ms | Allocations: 581)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 19407)
+Completed 200 OK in 33ms (Views: 19.5ms | ActiveRecord: 5.9ms | Allocations: 26100)
+
+
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:44:10 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:44:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/imagenes/menu.png" for 127.0.0.1 at 2023-11-29 14:44:10 -0300
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:44:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/menu.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/pages.1" for 127.0.0.1 at 2023-11-29 14:44:11 -0300
+Processing by PagesController#inicio as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `inicio'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicio.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 1716)
+  Rendered pages/inicio.html.erb within layouts/application (Duration: 3.9ms | Allocations: 5487)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 10280)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 13177)
+
+
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:44:11 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:44:11 -0300
+Started GET "/imagenes/menu.png" for 127.0.0.1 at 2023-11-29 14:44:11 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:44:11 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/menu.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/pages.1" for 127.0.0.1 at 2023-11-29 14:44:12 -0300
+Processing by PagesController#inicio as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `inicio'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicio.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 1716)
+  Rendered pages/inicio.html.erb within layouts/application (Duration: 4.0ms | Allocations: 5487)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 10076)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.3ms | Allocations: 12990)
+
+
+Started GET "/imagenes/menu.png" for 127.0.0.1 at 2023-11-29 14:44:12 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:44:12 -0300
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:44:12 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:44:12 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/menu.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/pages.1" for 127.0.0.1 at 2023-11-29 14:46:05 -0300
+Processing by PagesController#inicio as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `inicio'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicio.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.9ms | Allocations: 2470)
+  Rendered pages/inicio.html.erb within layouts/application (Duration: 6.1ms | Allocations: 6785)
+  Rendered shared/_footer.html.erb (Duration: 0.8ms | Allocations: 581)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 19413)
+Completed 200 OK in 35ms (Views: 20.9ms | ActiveRecord: 5.6ms | Allocations: 25945)
+
+
+Started GET "/imagenes/menu.png" for 127.0.0.1 at 2023-11-29 14:46:05 -0300
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:46:05 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/menu.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:46:05 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:46:05 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+Started GET "/pages.1" for 127.0.0.1 at 2023-11-29 14:46:18 -0300
+Processing by PagesController#inicio as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `inicio'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicio.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 1.4ms | Allocations: 1716)
+  Rendered pages/inicio.html.erb within layouts/application (Duration: 3.6ms | Allocations: 5487)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 17521)
+Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 0.3ms | Allocations: 20438)
+
+
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:46:18 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:46:18 -0300
+Started GET "/imagenes/menu.png" for 127.0.0.1 at 2023-11-29 14:46:18 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:46:18 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/menu.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/pages.1" for 127.0.0.1 at 2023-11-29 14:46:32 -0300
+Processing by PagesController#inicio as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `inicio'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicio.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 1716)
+  Rendered pages/inicio.html.erb within layouts/application (Duration: 5.2ms | Allocations: 5487)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 17515)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.4ms | Allocations: 20589)
+
+
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-29 14:46:32 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-29 14:46:32 -0300
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-29 14:46:32 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/imagenes/menu.png" for 127.0.0.1 at 2023-11-29 14:46:32 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/menu.png"):
+  
