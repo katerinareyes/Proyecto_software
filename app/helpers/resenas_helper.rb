@@ -1,0 +1,2 @@
+module ResenasHelper
+end

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiaLibros</title>
+</head>
+<body>
+    <main>
+        <section id="encabezado">
+            <h1 id="title">C⃣   a⃣   m⃣   b⃣   i⃣   a⃣   L⃣   i⃣   b⃣   r⃣   o⃣   s⃣</h1>
+            <ul class="menu">
+                <li><%= link_to "Inicio", "/pages", class: 'btn primary'%></li>
+                <li><%= link_to "Libros", libros_index_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Juegos", juegos_index_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Inventario", users_show_productos_path(current_user.id) , class: 'btn primary'%></li>
+                <li><%= link_to "Publicar libro", libros_new_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Publicar juego", juegos_new_path(current_user.id) , class: 'btn primary'%></li>
+                <li><%= link_to "Solicitudes Pendientes", solicituds_index_pendientes_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Historial de Solicitudes", solicituds_index_ar_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Tus Reseñas", resenas_index_path(current_user.id), class: "btn primary"%></li>
+                <li><%= link_to "Soporte", "/soporte" , class: 'btn primary'%></li>
+                <li><%= link_to "Tu Cuenta", users_show_path(current_user.id), class: 'btn primary'%></li>
+            </ul>
+        </section>
+
+        <section class="seccion-subtitulo">
+            <h2 id="subtitulo"> Perfil de <%= @usuario.nombre%></h2>
+        </section>
+        <section class="seccion-subtitulo">
+            <div class="caja-user-show">
+                <div class="subcaja">Nombre</div>
+                <div class="subcaja"><%= @usuario.nombre %></div>
+                <div class="subcaja">Correo</div>
+                <div class="subcaja"><%= @usuario.email %></div>
+                <div class="subcaja">Teléfono</div>
+                <div class="subcaja"><%= @usuario.telefono %></div>
+                <div class="subcaja">Descripción</div>
+                <div class="subcaja"><%= @usuario.descripcion %></div>
+                <div class="subcaja">Rol</div>
+                <div class="subcaja"><%= @rol %></div>
+                <div class="subcaja">Cantidad de libros publicados</div>
+                <div class="subcaja"><%= @libros_publicados %></div>
+                <div class="subcaja">Cantidad de juegos publicados</div>
+                <div class="subcaja"><%= @juegos_publicados %></div>
+                
+            </div>
+        </section>
+        <section class="seccion-subtitulo">
+        <section class="caja-botones">
+            <div class="subcaja">Actualizar</div>
+            <div class="subcaja"><%= link_to "Eliminar cuenta", users_destroy_path(current_user.id), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-3"%></div>
+        </section>
+        </section>
+    </main>
+
+</body>
+</html>

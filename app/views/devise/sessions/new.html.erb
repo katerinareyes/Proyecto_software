@@ -1,0 +1,31 @@
+<body style="background-color:#00695C">
+<section class="seccion-subtitulo">
+  <h2 id="subtitulo">Iniciar sesión</h2>
+</section>
+<section class="seccion-subtitulo">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :correo %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contraseña %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.label :recuérdame %>
+      <%= f.check_box :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Iniciar sesión" %>
+  </div>
+<% end %>
+
+</section>
+<%= render "devise/shared/links" %>
+</body>

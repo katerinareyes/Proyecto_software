@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiaLibros</title>
+</head>
+<body>
+    <%= render 'shared/header' %>
+        <section class="new">
+            <section class="seccion-subtitulo">
+                <section class="general" id="general-libros">
+                    <div class="general-1" id="general-1-libros">
+                        <h2>Publica un Juego!</h2>
+                        <p>
+                            Desde acá puedes publicar un juego. Basta solo con introducir cada uno de los requerimientos que se solicitan en cada campo.
+                            Se conciente que los datos que introduzcan seran con los que aparecera tu producto a los demás usuarios.
+                            Para mayor información, puedes consultar nuestras preguntas frecuentes.
+                        </p>
+                        <a href="#" class="btn-1">Informacion</a>
+                    </div>
+                    <div class="general-2" id="general-2-libros">
+                        <section class="seccion-formulario">
+
+
+                            <%= form_with model: @juego, url:juegos_create_path(current_user.id) do |form| %>
+                                <div>
+                                    <% @juego.errors.full_messages_for(:imagen).each do |message| %>
+                                        <div><%= message %></div>
+                                    <% end %>  
+                                </div>
+                                <div>
+                                    <%= form.label :Nombre %><br>
+                                    <%= form.text_field :nombre %>
+                                    <% @juego.errors.full_messages_for(:nombre).each do |message| %>
+                                    <div><%= message %></div>
+                                    <% end %>
+                                </div>   
+
+                                <div>
+                                    <%= form.label :Tipo %><br>
+                                    <%= form.text_field :tipo %>
+                                    <% @juego.errors.full_messages_for(:tipo).each do |message| %>
+                                    <div><%= message %></div>
+                                    <% end %>
+                                </div>
+
+                                <div>
+                                    <%= form.label :Estado %><br>
+                                    <%= form.select :estado, ["Nuevo", "Usado"]%>
+                                    <% @juego.errors.full_messages_for(:estado).each do |message| %>
+                                    <div><%= message %></div>
+                                    <% end %>
+                                </div>
+
+                                <div>
+                                    <%= form.label :"Número de jugadores" %><br>
+                                    <%= form.number_field :cant_jugadores %>
+                                    <% @juego.errors.full_messages_for(:cant_jugadores).each do |message| %>
+                                    <div><%= message %></div>
+                                    <% end %>
+                                </div>
+                                
+                                <div>
+                                    <%= form.label :"Descripción (opcional)"%><br>
+                                    <%= form.text_area :descripcion %>
+                                    <% @juego.errors.full_messages_for(:descripcion).each do |message| %>
+                                    <div><%= message %></div>
+                                    <% end %>
+                                </div>
+
+                                <section class="seccion-boton-imagen">
+                                <label> Elige una imagen para tu juego:   
+                                    <button id="upload_widget" class="btn-1">Subir imagen</button>
+                                </label>
+                                <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+                                <script type="text/javascript">  
+                                    var myWidget = cloudinary.createUploadWidget({
+                                    cloudName: 'dfifcytph', 
+                                    uploadPreset: 's08kqjzw'}, (error, result) => { 
+                                    if (!error && result && result.event === "success") { 
+                                        console.log('Done! Here is the image info: ', result.info); 
+                                    var url = result.info.url;
+                                    console.log('EL URL ES: ', url);
+                                    document.getElementById("imagen").value = url;
+                                            }
+                                        }
+                                    )
+                                    document.getElementById("upload_widget").addEventListener("click", function(){
+                                    myWidget.open();
+                                    }, false);
+
+                                </script>
+                                </section>                            
+            
+
+                                <%= form.hidden_field :imagen, id:"imagen" %>
+                            
+                                <%= form.submit "Guardar" %>
+                                
+                                <% end %>
+                        </section>
+                    </div>
+            </section>
+            
+            
+            <br>
+            </section>
+        </section>
+
+    </section>
+
+
+</body>
+</html>

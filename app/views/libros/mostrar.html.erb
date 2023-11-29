@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="turbo-visit-control" content="reload">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiaLibros</title>
+</head>
+<body>
+    <main>
+        <header>
+        </header>
+        <section id="encabezado">
+            <h1 id="title">C⃣   a⃣   m⃣   b⃣   i⃣   a⃣   L⃣   i⃣   b⃣   r⃣   o⃣   s⃣</h1>
+            <ul class="menu">
+                <li><%= link_to "Inicio", "/pages", class: 'btn primary'%></li>
+                <li><%= link_to "Libros", libros_index_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Juegos", juegos_index_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Inventario", users_show_productos_path(current_user.id) , class: 'btn primary'%></li>
+                <li><%= link_to "Publicar libro", libros_new_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Publicar juego", juegos_new_path(current_user.id) , class: 'btn primary'%></li>
+                <li><%= link_to "Solicitudes Pendientes", solicituds_index_pendientes_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Historial de Solicitudes", solicituds_index_ar_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Tus Reseñas", resenas_index_path(current_user.id), class: "btn primary"%></li>
+                <li><%= link_to "Soporte", "/soporte" , class: 'btn primary'%></li>
+                <li><%= link_to "Tu Cuenta", users_show_path(current_user.id), class: 'btn primary'%></li>
+            </ul>
+        </section>
+        <section class="seccion-subtitulo">
+            <h2 id="subtitulo">Título: <%= @libro.titulo %></h2>
+        </section>
+        <section class="grid-layout2">
+            <div class="subcaja-mostrar">
+                <%= cl_image_tag @libro.imagen.pathmap%>
+            </div>
+            <div class=caja-libro-mostrar>
+                <div class="subcaja">Autor</div>
+                <div class="subcaja"><%= @libro.autor %></div>
+                <div class="subcaja">Estado</div>
+                <div class="subcaja"><%= @libro.estado %></div>
+                <div class="subcaja">N° de páginas</div>
+                <div class="subcaja"><%= @libro.paginas %></div>
+                <div class="subcaja">Edición</div>
+                <div class="subcaja"><%= @libro.edicion %></div>
+                <div class="subcaja">Editorial</div>
+                <div class="subcaja"><%= @libro.editorial %></div>
+                <div class="subcaja">Tapa</div>
+                <div class="subcaja"><%= @libro.tapa %></div>
+                <div class="subcaja">Descripción</div>
+                <div class="subcaja"><%= @libro.descripcion %></div>
+            </div>
+            <div class="subcaja-mostrar">
+                <%@libro_owner = @libro.user%>
+                Este libro fue publicado por <%=@libro_owner.nombre %>
+                <br>
+                Ve lo que otros usuarios opinan de <%=@libro_owner.nombre %>:
+                <br>
+                Reseñas:
+                <%@resenas_recibidas.each do |resena_recibida|%>
+                <div>Calificación: <%=resena_recibida.calificacion%>/5:
+                <%=resena_recibida.comentario%></div>
+                <% end %>
+            </div>
+            
+        </section>
+        <section class="seccion-subtitulo">
+            <div class="caja-botones-mostrar">
+                <div class="subcaja"><%= link_to "Intercambiar",solicituds_new_solicitado_path(@libro.id, @tipo=1), class:'btn-3'%></div>
+                <div class="subcaja"><%= link_to "Volver", libros_index_path(current_user.id), class:'btn-3'%></div>
+            </div>
+        </section>
+    
+            
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

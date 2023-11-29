@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiaLibros</title>
+</head>
+<body>
+<<<<<<< HEAD
+        <section class="new">
+=======
+    <main>
+        <header>
+        </header>
+        <section id="encabezado">
+            <h1 id="title">C⃣   a⃣   m⃣   b⃣   i⃣   a⃣   L⃣   i⃣   b⃣   r⃣   o⃣   s⃣</h1>
+            
+            <ul class="menu">
+                <li><%= link_to "Inicio", "/pages", class: 'btn primary'%></li>
+                <li><%= link_to "Libros", libros_index_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Juegos", juegos_index_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Inventario", users_show_productos_path(current_user.id) , class: 'btn primary'%></li>
+                <li><%= link_to "Publicar libro", libros_new_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Publicar juego", juegos_new_path(current_user.id) , class: 'btn primary'%></li>
+                <li><%= link_to "Solicitudes Pendientes", solicituds_index_pendientes_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Historial de Solicitudes", solicituds_index_ar_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Tus Reseñas", resenas_index_path(current_user.id), class: "btn primary"%></li>
+                <li><%= link_to "Soporte", "/soporte" , class: 'btn primary'%></li>
+                <li><%= link_to "Tu Cuenta", users_show_path(current_user.id), class: 'btn primary'%></li>
+            </ul>
+        </section>
+       
+        <section>
+>>>>>>> refs/remotes/origin/Desarrollo
+            <section class="seccion-subtitulo">
+                <section class="general" id="general-libros">
+                    <div class="general-1" id="general-1-libros">
+                        <h2>Edita un Libro!</h2>
+                        <p>
+                            Desde acá puedes publicar un juego. Basta solo con introducir cada uno de los requerimientos que se solicitan en cada campo.
+                            Se conciente que los datos que introduzcan seran con los que aparecera tu producto a los demás usuarios.
+                            Para mayor información, puedes consultar nuestras preguntas frecuentes.
+                        </p>
+                        <a href="#" class="btn-1">Informacion</a>
+                    </div>
+                    <div class="general-2" id="general-2-libros">
+                        <section class="seccion-formulario">
+                            <%= form_with model: @libro, url: libros_update_path(current_user.id, @libro.id) do |form| %>
+                                <div>
+                                    <%= form.label :Título %><br>
+                                    <%= form.text_field :titulo %>
+                                    <% @libro.errors.full_messages_for(:titulo).each do |message| %>
+                                    <div><%= message %></div>
+                                    <% end %>
+                                </div>   
+
+                                <div>
+                                    <%= form.label :autor %><br>
+                                    <%= form.text_field :autor %>
+                                    <% @libro.errors.full_messages_for(:autor).each do |message| %>
+                                    <div><%= message %></div>
+                                    <% end %>
+                                </div>
+                                
+                                <div>
+                                    <%= form.label :estado %><br>
+                                    <%= form.text_field :estado %>
+                                    <% @libro.errors.full_messages_for(:estado).each do |message| %>
+                                    <div><%= message %></div>
+                                    <% end %>
+                                </div>
+
+                                <div>
+                                    <%= form.label :páginas %><br>
+                                    <%= form.number_field :paginas %>
+                                    <% @libro.errors.full_messages_for(:paginas).each do |message| %>
+                                    <div><%= message %></div>
+                                    <% end %>
+                                </div>
+
+                                <div>
+                                    <%= form.label :"Número de edición" %><br>
+                                    <%= form.number_field :edicion %>
+                                    <% @libro.errors.full_messages_for(:edicion).each do |message| %>
+                                    <div><%= message %></div>
+                                    <% end %>
+                                </div>
+
+                                <div>
+                                    <%= form.label :editorial %><br>
+                                    <%= form.text_field :editorial %>
+                                    <% @libro.errors.full_messages_for(:editorial).each do |message| %>
+                                    <div><%= message %></div>
+                                    <% end %>
+                                </div>
+                                
+                                <div>
+                                    <%= form.label :tapa %><br>
+                                    <%= form.text_field :tapa %>
+                                    <% @libro.errors.full_messages_for(:tapa).each do |message| %>
+                                    <div><%= message %></div>
+                                    <% end %>
+                                </div>
+
+                                <div>
+                                    <%= form.label :descripción %><br>
+                                    <%= form.text_area :descripcion %>
+                                    <% @libro.errors.full_messages_for(:descripcion).each do |message| %>
+                                    <div><%= message %></div>
+                                    <% end %>
+                                </div>
+                                <div>
+                                    <%= form.label :"Link imagen" %><br>
+                                    <%= form.text_field :imagen %>
+                                    <% @libro.errors.full_messages_for(:imagen).each do |message| %>
+                                    <div><%= message %></div>
+                                    <% end %>
+                                </div>
+                                <br>
+                                <%= form.submit "Actualizar" %>
+                            <% end %>  
+                        </section>
+                    </div>
+            </section>
+<<<<<<< HEAD
+            
+        </section>   
+=======
+            <section class="seccion-boton_imagen">
+            <div>
+                <label> Actualiza la imagen de tu libro: 
+            <button id="upload_widget" class="btn-1">Sube una imagen</button></label>
+                <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+                <script type="text/javascript">  
+                var myWidget = cloudinary.createUploadWidget({
+                    cloudName: 'dfifcytph', 
+                    uploadPreset: 's08kqjzw'}, (error, result) => { 
+                        if (!error && result && result.event === "success") { 
+                            console.log('Done! Here is the image info: ', result.info); 
+                           var url = result.info.url;
+                           console.log('EL URL ES: ', url);
+                           document.getElementById("imagen").value = url;
+                        }
+                    }
+                )
+                document.getElementById("upload_widget").addEventListener("click", function(){
+                        myWidget.open();
+                    }, false);
+                    
+                </script>
+            </div>
+            </section>
+
+            <section class="seccion-formulario">
+            <%= form_with model: @libro, url: libros_update_path(current_user.id, @libro.id) do |form| %>
+            <div>
+            <%= form.hidden_field :imagen, id:"imagen" %>
+            <% @libro.errors.full_messages_for(:imagen).each do |message| %>
+                <div><%= message %></div>
+                <% end %>
+            </div>
+
+            <div>
+                <%= form.label :Título %><br>
+                <%= form.text_field :titulo %>
+                <% @libro.errors.full_messages_for(:titulo).each do |message| %>
+                <div><%= message %></div>
+                <% end %>
+            </div>   
+
+            <div>
+                <%= form.label :autor %><br>
+                <%= form.text_field :autor %>
+                <% @libro.errors.full_messages_for(:autor).each do |message| %>
+                <div><%= message %></div>
+                <% end %>
+            </div>
+            
+            <div>
+                <%= form.label :estado %><br>
+                <%= form.select :estado, ["Nuevo", "Usado"]%>
+                <% @libro.errors.full_messages_for(:estado).each do |message| %>
+                <div><%= message %></div>
+                <% end %>
+            </div>
+
+            <div>
+                <%= form.label :páginas %><br>
+                <%= form.number_field :paginas %>
+                <% @libro.errors.full_messages_for(:paginas).each do |message| %>
+                <div><%= message %></div>
+                <% end %>
+            </div>
+
+            <div>
+                <%= form.label :"Número de edición" %><br>
+                <%= form.number_field :edicion %>
+                <% @libro.errors.full_messages_for(:edicion).each do |message| %>
+                <div><%= message %></div>
+                <% end %>
+            </div>
+
+            <div>
+                <%= form.label :editorial %><br>
+                <%= form.text_field :editorial %>
+                <% @libro.errors.full_messages_for(:editorial).each do |message| %>
+                <div><%= message %></div>
+                <% end %>
+            </div>
+            
+            <div>
+                <%= form.label :tapa %><br>
+                <%= form.text_field :tapa %>
+                <% @libro.errors.full_messages_for(:tapa).each do |message| %>
+                <div><%= message %></div>
+                <% end %>
+            </div>
+
+            <div>
+                <%= form.label :descripción %><br>
+                <%= form.text_area :descripcion %>
+                <% @libro.errors.full_messages_for(:descripcion).each do |message| %>
+                <div><%= message %></div>
+                <% end %>
+            </div>
+            
+            <br>
+            <%= form.submit "Actualizar" %>
+            <% end %>
+            </section>
+        </section>
+>>>>>>> refs/remotes/origin/Desarrollo
+       
+</body>
+</html>

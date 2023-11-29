@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiaLibros</title>
+</head>
+<body>
+    <main>
+        <header>
+        </header>
+        <section id="encabezado">
+            <h1 id="title">C⃣   a⃣   m⃣   b⃣   i⃣   a⃣   L⃣   i⃣   b⃣   r⃣   o⃣   s⃣</h1>
+            <ul class="menu">
+                <li><%= link_to "Inicio", "/pages", class: 'btn primary'%></li>
+                <li><%= link_to "Libros", libros_index_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Juegos", juegos_index_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Inventario", users_show_productos_path(current_user.id) , class: 'btn primary'%></li>
+                <li><%= link_to "Publicar libro", libros_new_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Publicar juego", juegos_new_path(current_user.id) , class: 'btn primary'%></li>
+                <li><%= link_to "Solicitudes Pendientes", solicituds_index_pendientes_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Historial de Solicitudes", solicituds_index_ar_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Tus Reseñas", resenas_index_path(current_user.id), class: "btn primary"%></li>
+                <li><%= link_to "Soporte", "/soporte" , class: 'btn primary'%></li>
+                <li><%= link_to "Tu Cuenta", users_show_path(current_user.id), class: 'btn primary'%></li>
+            </ul>
+        </section>
+        <section class="seccion-subtitulo">
+        <h2 id="subtitulo" Aquí encontrarás tu historial de solicitudes Aceptadas y Rechazadas>
+        </section>
+        <section class="seccion-subtitulo">
+        <h2 id="subtitulo">Solicitudes Realizadas Aceptadas</h2>
+        </section>
+        <section class="seccion-tabla">
+            <table>
+                <thead>
+                <tr>
+                <th>Solicitaste el siguiente producto:</th>
+                <th>Ofreciste el siguiente producto:</th>   
+                <th>Estado de la solicitud</th> 
+                <th>Contáctate</th>  
+                <th>Deja una reseña</th> 
+                <th>Se concretó el intercambio?</th> 
+                </tr>
+                </thead>
+
+            <% @solicitudes_aceptadas_realizadas.each do |solicitud_aceptada_realizada| %>
+            <tr>
+            <td><%= solicitud_aceptada_realizada[1]%></td>
+            <td><%= solicitud_aceptada_realizada[3]%></td>
+            <td><%= solicitud_aceptada_realizada[0]%></td>
+            <td> Chatea con <%=solicitud_aceptada_realizada[2].nombre%></td>
+            <td><%= link_to "Dejar reseña", resenas_new_path(current_user.id, solicitud_aceptada_realizada[2].id), class: "btn-2"%></td>
+            <td>Sí/No</td>
+            <% end %>
+            </tr>
+            </table>
+        </section>
+
+        <section class="seccion-subtitulo">
+        <h2 id="subtitulo">Solicitudes Recibidas Aceptadas</h2>
+        </section>
+        <section class="seccion-tabla">
+            <table>
+                <thead>
+                <tr>
+                <th>Solicitaron tu producto:</th>
+                <th>Te ofrecieron el siguiente producto:</th>   
+                <th>Estado de la solicitud</th> 
+                <th>Contáctate</th>  
+                <th>Deja una reseña</th>  
+                <th>Se concretó el intercambio?</th>            
+                </tr>
+                </thead>
+            <% @solicitudes_aceptadas_recibidas.each do |solicitud_aceptada_recibida| %>
+            <tr>
+            <td><%= solicitud_aceptada_recibida[1]%></td>
+            <td><%= solicitud_aceptada_recibida[3]%></td>
+            <td><%= solicitud_aceptada_recibida[0]%></td>
+            <td> Chatea con <%=solicitud_aceptada_recibida[4].nombre%></td>
+            <td><%= link_to "Dejar reseña", resenas_new_path(current_user.id, solicitud_aceptada_recibida[4].id), class: "btn-2"%></td>
+            <td>Sí/No</td>
+            <% end %>
+            </tr>
+            </table>
+        </section>
+
+        <section class="seccion-subtitulo">
+        <h2 id="subtitulo">Solicitudes Realizadas Rechazadas</h2>
+        </section>
+        <section class="seccion-tabla">
+            <table>
+                <thead>
+                <tr>
+                <th>Solicitaste el siguiente producto:</th>
+                <th>Ofreciste el siguiente producto:</th>   
+                <th>Estado de la solicitud</th> 
+                <th>Contáctate</th>  
+                <th>Deja una reseña</th>  
+                <th>Eliminar del historial</td>
+                </tr>
+                </thead>
+
+            <% @solicitudes_rechazadas_realizadas.each do |solicitud_rechazada_realizada| %>
+            <tr>
+            <td><%= solicitud_rechazada_realizada[1]%></td>
+            <td><%= solicitud_rechazada_realizada[3]%></td>
+            <td><%= solicitud_rechazada_realizada[0]%></td>
+            <td> Chatea con <%=solicitud_rechazada_realizada[2].nombre%></td>
+            <td><%= link_to "Dejar reseña", resenas_new_path(current_user.id, solicitud_rechazada_realizada[2].id), class: "btn-2"%></td>
+            <td><%= link_to "Eliminar solicitud", solicituds_destroy_path(current_user.id, solicitud_rechazada_realizada[5]), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-2"%></td>
+            <% end %>
+            </tr>
+            </table>
+        </section>
+
+        <section class="seccion-subtitulo">
+        <h2 id="subtitulo">Solicitudes Recibidas Rechazada</h2>
+        </section>
+        <section class="seccion-tabla">
+            <table>
+                <thead>
+                <tr>
+                <th>Solicitaron tu producto:</th>
+                <th>Te ofrecieron el siguiente producto:</th>   
+                <th>Estado de la solicitud</th> 
+                <th>Contáctate</th>  
+                <th>Deja una reseña</th>    
+                <th>Eliminar del historial</th>          
+                </tr>
+                </thead>
+            <% @solicitudes_rechazadas_recibidas.each do |solicitud_rechazada_recibida| %>
+            <tr>
+            <td><%= solicitud_rechazada_recibida[1]%></td>
+            <td><%= solicitud_rechazada_recibida[3]%></td>
+            <td><%= solicitud_rechazada_recibida[0]%></td>
+            <td> Chatea con <%=solicitud_rechazada_recibida[4].nombre%></td>
+            <td><%= link_to "Dejar reseña", resenas_new_path(current_user.id, solicitud_rechazada_recibida[4].id), class: "btn-2"%></td>
+            <td><%= link_to "Eliminar solicitud", solicituds_destroy_path(current_user.id, solicitud_rechazada_recibida[5]), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-2"%></td>
+            <% end %>
+            </tr>
+            </table>
+            
+        </section>
+    </main>
+</body>
+

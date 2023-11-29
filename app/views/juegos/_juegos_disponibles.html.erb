@@ -1,0 +1,45 @@
+<%= turbo_frame_tag "juegos_disponibles" do %>
+<div class= div3>
+    <%= form_with url: juegos_search_path, method: :get , class: "formulario-busqueda" do |form|%>
+    <%= form.search_field :nombre, placeholder: "Buscar por nombre", value: params[:nombre]%>
+    <div class= div4>
+    <%= form.radio_button :estado, "Nuevo" , value: params[:estado]%>
+    <%= form.label :estado_nuevo, "Nuevo"%>
+    </div>
+    <div class= div4>
+    <%= form.radio_button :estado, "Usado" , value: params[:estado]%>
+    <%= form.label :estado_usado, "Usado"%>
+    </div>
+    <%= form.button "Buscar" %>
+    <% end %>
+   
+</div>
+<section class="grid-layout">
+            <% juegos_disponibles.each do |juego_disponible| %>
+            <div class="caja-index">
+                <div class="subcaja c1">
+                    <%= cl_image_tag juego_disponible.imagen.pathmap%>
+                </div>
+                <div class="subcaja">Nombre</div>
+                <div class="subcaja"><%= juego_disponible.nombre %></div>
+                <div class="subcaja">Tipo</div>
+                <div class="subcaja"><%= juego_disponible.tipo %></div>
+                <div class="subcaja">Estado</div>
+                <div class="subcaja"><%= juego_disponible.estado %></div>
+                <div class="subcaja">N° Jugadores</div>
+                <div class="subcaja"><%= juego_disponible.cant_jugadores %></div>
+                <div class="subcaja">Descripción</div>
+                <div class="subcaja"><%= juego_disponible.descripcion %></div>
+                <div class="subcaja">Te interesa?</div>
+                <div class="subcaja"><%= link_to "Ver Juego", juegos_mostrar_path(juego_disponible, juego_disponible.user.id), data:{turbo:"false"}, class: 'btn-2'%></div>
+                <% if can?(:update, juego_disponible) %>
+                    <div class="subcaja"><%= link_to 'Editar', edit_juego_disponible_path(juego_disponible), class: 'btn-editar' %></div>
+                <% end %>                
+                <% if can?(:destroy, juego_disponible) %>
+                    <div class="subcaja"><%= link_to 'Eliminar', juego_disponible, method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'btn-eliminar' %></div>
+                <% end %>
+            </div>    
+            <% end %>
+            
+</section>
+<% end %>

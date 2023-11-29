@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: Las cronicas de Narnia
+  autor: C. S. Lewis
+  estado: Nuevo
+  paginas: 200
+  edicion: 1990
+  editorial: Santillana
+  tapa: Dura
+  descripcion: Aventura Epica
+  imagen: imagen
+  user: diego
+
+two:
+  titulo: Game of Thrones
+  autor: George R. R. Martin
+  estado: Nuevo
+  paginas: 998
+  edicion: 2018
+  editorial: Santillana
+  tapa: Dura
+  descripcion: Historia de drama
+  imagen: imagen
+  user: diego

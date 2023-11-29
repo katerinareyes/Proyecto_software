@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiaLibros</title>
+</head>
+<body>
+    <%= render 'shared/header' %>
+
+
+    <main>
+        <section class="seccion-subtitulo">
+            <h2 id="subtitulo">Libros Disponibles</h2>
+        </section>
+        <div>
+            <%= render "libros_disponibles", libros_disponibles: @libros_disponibles %>
+        </div>
+        
+            
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

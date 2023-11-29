@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiaLibros</title>
+</head>
+<body>
+    <%= render 'shared/header' %>
+
+    <section class=acordeon>
+        <section class="contenedor-acordeon">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="acordeon1">
+                <input type="radio" name="acordeon" id="btn-acordeon1" class="btn-acordeon">
+                <label for="btn-acordeon1">¿Cómo puedo listar mis libros o juegos para intercambiar?</label>
+                <div class="contenido-acordeon">
+                    <p>Para listar tus artículos, inicia sesión en tu perfil y presiona la
+                     opción "Publicar", selecciona el objeto que deseas intercambiar. Completa la información solicitada sobre el
+                      artículo, incluyendo detalles como el estado y cualquier preferencia
+                       de intercambio..</p>
+                </div>
+            </div>
+            <div class="acordeon1">
+                <input type="radio" name="acordeon" id="btn-acordeon2" class="btn-acordeon">
+                <label for="btn-acordeon2">¿Cómo funcionan las negociaciones de intercambio?</label>
+                <div class="contenido-acordeon">
+                    <p>Una vez que encuentres un artículo que te interese, puedes iniciar una 
+                    conversación con el usuario a través de nuestro sistema de mensajería
+                     integrado. Discute los detalles, negocia condiciones y coordina la 
+                     logística del intercambio directamente con el otro usuario.</p>
+                </div>
+            </div>
+            <div class="acordeon1">
+                <input type="radio" name="acordeon" id="btn-acordeon3" class="btn-acordeon">
+                <label for="btn-acordeon3">¿Qué sucede si tengo problemas con un intercambio?</label>
+                <div class="contenido-acordeon">
+                    <p>Si experimentas problemas durante un intercambio, nuestro equipo de soporte
+                    está aquí para ayudarte. Ponte en contacto con nosotros a través de la sección
+                     de soporte en tu perfil para recibir asistencia y resolver cualquier
+                      inconveniente.</p>
+                </div>
+            </div>
+            <div class="acordeon1">
+                <input type="radio" name="acordeon" id="btn-acordeon4" class="btn-acordeon">
+                <label for="btn-acordeon4">¿Cómo puedo confiar en la calidad de los artículos intercambiados?</label>
+                <div class="contenido-acordeon">
+                    <p>La confianza es importante para nosotros. Fomentamos una comunidad 
+                    transparente con reseñas y valoraciones. Antes de confirmar un intercambio,
+                     revisa las reseñas de otros usuarios sobre el artículo y verifica su
+                      historial de intercambios para tomar decisiones informadas.</p>
+                </div>
+            </div>
+        </section>
+    </seccion>
+
+    <section class="general">
+        <div class="general-1">
+            <h2>Necesito comunicarme con un Administrador</h2>
+            <p>
+                Para contactar a un administrador mediante correo electrónico, completa
+                 el formulario de contacto que se encuentra a continuación. En el formulario, proporciona tu nombre, dirección 
+                   de correo electrónico y detalla claramente el asunto de tu consulta.
+                    Asegúrate de seleccionar la categoría correspondiente al
+                     tipo de problema o pregunta que estás presentando. Al enviar
+                      el formulario, tu mensaje será transmitido al equipo de
+                       administradores, quienes revisarán tu solicitud y se
+                        pondrán en contacto contigo a través de la dirección
+                         de correo electrónico proporcionada en el formulario.
+                          Además, incluye cualquier información adicional
+                           relevante que pueda ayudar a entender mejor tu situación,
+                            como números de referencia o capturas de pantalla.
+                             Esperamos poder ayudarte pronto.
+            
+        </div>
+        <div class="general-2"></div>
+    </section>
+
+    <section class="seccion-formulario">
+        <div class="contenedor-formulario-soporte">
+            <form id="formulario">
+                <div class="input-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Ej: Diego Ustares">
+                    <label for="correo">Correo</label>
+                    <input type="text" id="correo" placeholder="Ej: daustares@uc.cl">
+                    <label for="descripcion">Descripcion</label>
+                    <textarea name="descripcion" id="descripcion" cols="30" rows="5" placeholder="He presentado problemas con..."></textarea>
+                    <input class="btn" type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

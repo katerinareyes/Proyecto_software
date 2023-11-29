@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiaLibros</title>
+</head>
+<body>
+    <main>
+        <header>
+        </header>
+        <section id="encabezado">
+            <h1 id="title">C⃣   a⃣   m⃣   b⃣   i⃣   a⃣   L⃣   i⃣   b⃣   r⃣   o⃣   s⃣</h1>
+            <ul class="menu">
+                <li><%= link_to "Inicio", "/pages", class: 'btn primary'%></li>
+                <li><%= link_to "Libros", libros_index_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Juegos", juegos_index_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Inventario", users_show_productos_path(current_user.id) , class: 'btn primary'%></li>
+                <li><%= link_to "Publicar libro", libros_new_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Publicar juego", juegos_new_path(current_user.id) , class: 'btn primary'%></li>
+                <li><%= link_to "Solicitudes Pendientes", solicituds_index_pendientes_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Historial de Solicitudes", solicituds_index_ar_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Tus Reseñas", resenas_index_path(current_user.id), class: "btn primary"%></li>
+                <li><%= link_to "Soporte", "/soporte" , class: 'btn primary'%></li>
+                <li><%= link_to "Tu Cuenta", users_show_path(current_user.id), class: 'btn primary'%></li>
+            </ul>
+        </section>
+        <section class="seccion-subtitulo">
+        <h2 id="subtitulo">
+        Selecciona otro producto para intercambiar
+        </h2>
+        </section>
+        <section class="seccion-subtitulo">
+        <h2 id="subtitulo">Libros</h2>
+        </section>
+        <section class="seccion-tabla">
+            <table>
+                <thead>
+                <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Estado</th>
+                <th>N° Páginas</th>
+                <th>Edición</th>
+                <th>Editorial</th>
+                <th>Tapa</th>
+                <th>Descripción</th>
+                <th>Seleccionar Libro</th>             
+                </tr>
+                </thead>
+            <% @libros_usuario.each do |libro_usuario| %>
+            <tr>
+                <td><%= libro_usuario.titulo %></td>
+                <td><%= libro_usuario.autor %></td>
+                <td><%= libro_usuario.estado %></td>
+                <td><%= libro_usuario.paginas %></td>
+                <td><%= libro_usuario.edicion %></td>
+                <td><%= libro_usuario.editorial %></td>
+                <td><%= libro_usuario.tapa %></td>
+                <td><%= libro_usuario.descripcion %></td>
+                <%@solicitud = Solicitud.find(params[:solicitud_id])%>
+                <td><%= form_with model: @solicitud, url: solicituds_update_solicitud_path(current_user.id, @solicitud.id) do |form|%>
+                <%= form.hidden_field :estado, value:@solicitud.estado%>
+                <%= form.hidden_field :solicitable_type, value:@solicitud.solicitable_type%>
+                <%= form.hidden_field :solicitable_id, value:@solicitud.solicitable_id%>
+                <%= form.hidden_field :ofreciable_type, value:"Libro"%>
+                <%= form.hidden_field :ofreciable_id, value:libro_usuario.id%>
+                <%= form.button "Seleccionar", type: :submit, class:"btn-4"%>
+                <% end %></td>
+            </tr>   
+            <% end %>
+        </table>
+
+        </section>
+        <section class="seccion-subtitulo">
+        <h2 id="subtitulo">Juegos</h2>
+        </section>
+        <section class="seccion-tabla">
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Estado</th>
+                        <th>N° Jugadores</th>
+                        <th>Descripción</th>
+                        <th>SeleccionarJuego</th>
+                    </tr>
+                </thead>   
+                <% @juegos_usuario.each do |juego_usuario|%>
+                <tr>
+                    <td><%= juego_usuario.nombre %></td>
+                    <td><%= juego_usuario.tipo %></td>
+                    <td><%= juego_usuario.estado %></td>
+                    <td><%= juego_usuario.cant_jugadores %></td>
+                    <td><%= juego_usuario.descripcion %></td>
+                    <% @solicitud = Solicitud.find(params[:solicitud_id])%>
+                    <td><%= form_with model: @solicitud, url: solicituds_update_solicitud_path(current_user.id, @solicitud.id) do |form|%>
+                    <%= form.hidden_field :estado, value:@solicitud.estado%>
+                    <%= form.hidden_field :solicitable_type, value:@solicitud.solicitable_type%>
+                    <%= form.hidden_field :solicitable_id, value:@solicitud.solicitable_id%>
+                    <%= form.hidden_field :ofreciable_type, value:"Juego"%>
+                    <%= form.hidden_field :ofreciable_id, value:juego_usuario.id%>
+                    <%= form.button "Seleccionar", type: :submit, class:"btn-4"%>
+                    <% end %></td>
+                </tr>   
+                <% end %>
+            </table>
+
+        </section>
+        
+
+         
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>

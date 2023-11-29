@@ -1,0 +1,990 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0%;
+    margin-top: 0;
+
+}
+
+head{
+    margin-top: 0;
+}
+
+.menu li a:hover {
+    background: #ef8354;
+}
+
+
+#micuenta {
+    padding: 20px 50px 20px 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+#formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    text-align: center;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.7));
+}
+
+.formulario-busqueda {
+    width: 30%;
+    margin-right: 50px;
+    align-items: right;
+}
+
+.input-group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+}
+    
+    label {
+        color: white;
+        font-size: 18px;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 1px #000;
+    }
+    
+    #formulario .label-formulario {
+        color: white;
+        font-size: 18px;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 1px #000;
+    }
+    
+    input,
+    textarea {
+        padding: 17px 25px;
+        border-radius: 25px;
+        margin-bottom: 20px;
+        outline: none;
+        color: black;
+        min-width: 500px;
+        background-color: #edfff0;
+        border: 2px solid #f0faf1;
+    }
+    
+    .btn {
+        margin-top: 0px;
+        font-size: 16px;
+        color: white;
+        border: 0;
+        border-radius: 25px;
+        
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        transition: all 300ms ease;
+        cursor: pointer;
+        text-shadow: 2px 2px 5px #000;
+    }
+    
+    .btn-2 {
+        margin-top: 30px;
+        font-size: 16px;
+        color: white;
+        border: 0;
+        border-radius: 25px;
+        transition: all 300ms ease;
+        cursor: pointer;
+        text-shadow: 2px 2px 5px #000;
+    }
+    
+    .btn-3 {
+        margin-top: 30px;
+        font-size: 20px;
+        color: white;
+        border: 0;
+        border-radius: 25px;
+        transition: all 300ms ease;
+        cursor: pointer;
+        text-shadow: 2px 2px 5px #000;
+    }
+    
+    .btn-4 {
+        margin-top: 30px;
+        font-size: 20px;
+        background: rgba(130, 161, 139, 0.32);
+        color: white;
+        border: 0;
+        border-radius: 25px;
+        transition: all 300ms ease;
+        cursor: pointer;
+        text-shadow: 2px 2px 5px #000;
+    }
+    
+    
+    
+    .btn:hover {
+        background-color: #ef8354;
+    }
+    
+    .acordeon{
+        background-color: #E1E2E6;
+    }
+    
+    .contenedor-acordeon {
+        padding: 70px 0 30px 0;
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+    }
+    
+    .contenedor-acordeon h2 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 35px;
+        color: white;
+        text-shadow: 2px 2px 5px #000;
+    }
+    
+    .acordeon1 label {
+        display: block;
+        padding: 20px;
+        font-size: 20px;
+        background: #CE967B;
+        color: white;
+        text-shadow: 2px 2px 5px #000;
+        cursor: pointer;
+        margin-bottom: 2px;
+        transition: all 300ms ease;
+        border-radius: 20px;
+    }
+    
+    .acordeon1 label:hover {
+        background: #ef8354;
+    }
+    
+    .acordeon1 .contenido-acordeon {
+        padding: 0px;
+        margin: 0px 20px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 300ms ease;
+    }
+    
+    .btn-acordeon:checked~.contenido-acordeon {
+        max-height: 100%;
+        padding: 15px 0px;
+    }
+    
+    
+    .seccion-formulario{
+        margin: 0;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.5)),
+            url(libros2.jpeg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 150px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        
+        
+        .contenedor-formulario-soporte {
+            margin-top: 100px;
+            margin-bottom: 150px;
+        }
+        /* .btn-acordeon:checked ~ #label-selector-derecha{
+            min-height: 400px;
+
+} */
+
+
+.btn-acordeon {
+    display: none;
+}
+
+
+.seccion-subtitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E1E2E6;
+    padding: 0px;
+}
+
+
+.seccion-tabla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.7)),
+        url(libros2.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+}
+
+table {
+    color: white;
+    font-size: 18px;
+    border: solid 2px rgba(255, 255, 255, 0.5);
+    border-left: none;
+    border-right: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 75px;
+    border-radius: 20px;
+}
+
+
+thead {
+    background: #092327;
+}
+
+th {
+    padding: 15px;
+    border-radius: 20px;
+}
+
+td {
+    padding: 30px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000;
+    background: rgba(130, 161, 139, 0.32);
+    backdrop-filter: blur(100px);
+
+}
+
+tbody tr:hover {
+    background: #ef8354;
+}
+
+tbody tr {
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+
+.seccion-parrafo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parrafo {
+    margin-top: 100px;
+    font-size: 20px;
+    justify-content: center;
+    text-align: justify;
+    max-width: 400px;
+
+}
+
+.selector-objeto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#menu-selector {
+    border-radius: 20px;
+}
+
+#label-selector-derecha {
+    border-radius: 20px;
+    text-align: center;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+#label-selector-izquierda {
+    border-radius: 20px;
+    text-align: center;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+.acordeon .label-formulario {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 1px #000;
+    background: none;
+}
+
+
+
+
+/* Inventario */
+
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #E1E2E6;
+    gap: 100px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.grid-layout2 {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    margin-right: 100px;
+    gap: 50px;
+    padding: 50px;
+}
+
+.caja-libro-show {
+    background: rgba(166, 147, 123, 0.32);
+    backdrop-filter: blur(100px);
+    width: 500px;
+    height: 650px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 40% 8.57% 8.57% 8.57% 8.57% 8.57% 8.57% 8.57%;
+    padding: 1px;
+}
+
+.caja-user-show {
+    background: rgba(166, 147, 123, 0.32);
+    backdrop-filter: blur(100px);
+    width: 40%;
+    height: 50%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 15%, 14%, 14%, 14%, 14%, 14%, 14%;
+    padding: 1px;
+}
+
+.caja-index {
+    background: rgba(166, 147, 123, 0.32);
+    backdrop-filter: blur(100px);
+    width: 500px;
+    height: 650px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 40% 10% 10% 10% 10% 10% 10%;
+    padding: 1px;
+}
+
+.caja-index2 {
+    background: rgba(166, 147, 123, 0.32);
+    backdrop-filter: blur(100px);
+    width: 500px;
+    height: 650px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 50% 10% 10% 10% 10% 10%;
+    padding: 1px;
+}
+
+.caja-juego-show {
+    background: rgba(166, 147, 123, 0.32);
+    backdrop-filter: blur(100px);
+    width: 500px;
+    height: 550px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 50% 12.5% 12.5% 12.5% 12.5%;
+    padding: 1px;
+}
+
+.caja-libro-mostrar {
+    background: rgba(166, 147, 123, 0.32);
+    backdrop-filter: blur(100px);
+    width: 400px;
+    height: 350px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%;
+    padding: 1px;
+}
+
+.caja-juego-mostrar {
+    background: rgba(166, 147, 123, 0.32);
+    backdrop-filter: blur(100px);
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 25% 25% 25% 25%;
+    padding: 1px;
+}
+
+.caja-botones {
+    background: rgba(166, 147, 123, 0.32);
+    backdrop-filter: blur(100px);
+    width: 400px;
+    height: 125px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    padding: 1px;
+}
+
+.caja-botones2 {
+    background: rgba(166, 147, 123, 0.32);
+    backdrop-filter: blur(100px);
+    width: 15%;
+    height: 5%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 1px;
+}
+
+.caja-botones-mostrar {
+    background: rgba(166, 147, 123, 0.32);
+    backdrop-filter: blur(100px);
+    width: 350px;
+    height: 125px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    padding: 1px;
+}
+
+.caja2 {
+    backdrop-filter: blur(100px);
+    width: 500px;
+    height: 650px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 40% 8.57% 8.57% 8.57% 8.57% 8.57% 8.57% 8.57%;
+    padding: 1px;
+}
+
+.subcaja {
+    justify-content: center;
+    border-radius: 20px;
+    color: white;
+    text-shadow: 2px 2px 1px #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 5px;
+    line-height: 40px;
+    padding: 10px;
+
+}
+
+.subcaja-mostrar {
+    background: rgba(166, 147, 123, 0.32);
+    backdrop-filter: blur(100px);
+    justify-content: center;
+    border-radius: 20px;
+    color: white;
+    text-shadow: 2px 2px 1px #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 5px;
+    line-height: 40px;
+    padding: 10px;
+}
+
+.c1 {
+    grid-column: 1/ span 2;
+    margin-bottom: 10px;
+    padding: 1px;
+}
+
+img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0px 0px;
+    
+}
+
+img.i2 {
+    width: 60%;
+    height: 100%;
+    display: flex;
+
+    border-radius: 20px 20px 0px 0px;
+}
+
+.caja:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.div2 {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+.container{ 
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.header {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.8)),
+        url(biblioteca-disea-estanterias-interior-wallpaper-c9c0288d71bacd2be657483f10a116fd.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #FFFDFC;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar .opcion{
+    position: relative;
+    float: left;
+    
+
+}
+
+.menu .navbar li:hover > ul{
+    display: block;
+}
+
+.menu .navbar li ul{
+    padding: 0;
+    margin: 0;
+    display: none;
+   
+
+}
+.menu .navbar .opcion a{
+    font-size: 15px;
+    padding: 10px;
+    color: #FFFDFC;
+    display: block;
+    font-weight: 600;
+}
+
+
+
+
+
+/* .menu .navbar ul li a:hover{
+    color: #CE967B;
+} */
+
+#menu {
+    display: none;
+}
+
+#logo-icono{
+    display: none;
+    width: 20%;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.icono{
+    margin-top: 0px;
+    width: 130px;
+    margin-bottom: 15px;
+}
+
+#label-menu{
+    cursor: pointer;
+    display: none;
+}
+
+.header-content{
+    text-align: center;
+}
+
+.header-content h1{
+    font-size: 75px;
+    line-height: 80px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.header-content p{
+    font-size: 16px;
+    color: #C5C5C5;
+    padding: 0 250px;
+    margin-bottom: 30px;
+}
+
+.btn-1{
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #CE967B;
+    color: #F9FAFC;
+    text-transform: uppercase;
+}
+
+.btn-1:hover{
+    background-color: #ebad8d;
+}
+
+
+.login{
+    background-color: white;
+}
+
+.login ul li {
+    position: relative;
+    float: left;
+    list-style: none;
+}
+
+.login ul li p{
+    display: block;
+    
+}
+
+.coffee{
+    padding: 100px 0;
+    background-color: #E1E2E6;
+    position: relative;
+}
+
+.coffee-content{
+    text-align: center;
+
+}
+
+.coffee-content h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    padding: 0 250px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.txt-p{
+    font-size: 16px;
+    color: #414247;
+    padding: 0 250px;
+    margin-bottom: 35px;
+    text-shadow: none;
+}
+
+
+.coffee-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.coffee-1{
+    padding: 0 25px;
+
+}
+.coffee-1 img{
+    width: 350px;
+    height: 500px;
+
+}
+
+.coffee-1 p{
+    color: #323337;
+    text-shadow: none;
+}
+
+.coffee-img{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 350px;
+}
+
+.coffee-1 h3{
+    color: #323337;
+    font: 20px;
+    margin-bottom: 15px;
+    margin-top: 100px;
+}
+
+#boton-info{
+    margin-top: 10px;
+}
+
+
+/* servicios
+*/
+.services{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.7)),
+        url(libros2.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+}
+
+.services-content{
+    text-align: center;
+}
+
+.services-content h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+}
+
+.services-content p{
+    font-size: 16px;
+    color: #C5C5C5;
+    margin-bottom: 50px;
+    padding: 0 100px;
+}
+
+.services-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.services-1{
+    padding: 0 100px;
+}
+
+.services-1 img{
+    width: 30px;
+    margin-bottom: 20px;
+}
+
+.services-1 h3{
+    color: #EACCB3;
+    font-size: 18px;
+}
+
+
+/* info sobre items */
+
+
+.general{
+    display: flex;
+}
+
+.general-1{
+    width: 50%;
+    padding: 100px 250px 100px 100px;
+    background-color: #E1E2E6;
+}
+
+.general-2{
+    background-image: url(foto1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+.general-3{
+    background-image: url(foto2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+#general-libros{
+    padding: 1px ;
+}
+
+#general-1-libros{
+    margin-top: 200px;
+    width: 40%;
+    padding: 100px 220px 100px 100px;
+}
+
+#general-2-libros{
+    width: 60%;
+    background-image: none;
+}
+
+h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.general p{
+    font-size: 16px;
+    color: #414247;
+    padding: 25px 0 45px 0;
+    text-shadow: none;
+}
+
+
+.blog{
+    padding: 100px 0;
+    text-align: center;
+}
+
+.blog-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-1{
+    padding: 15px 55px;
+}
+
+.blog-1 img{
+    width: 300px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    max-height: 100px;
+}
+
+.blog-1 h3{
+    font-size: 25px;
+    color: #323337;
+    text-shadow: none;
+}
+
+
+.footer{
+    padding: 100px 0 150px 0;
+    background-color: #000000;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link h3{
+    font-size: 18px;
+    color: #F9FAFC;
+    margin-bottom: 50px;
+}
+
+.link a{
+    
+    font-size: 13px;
+    color: #C5C5C5;
+    display: block;
+    margin-bottom: 15px;
+}
+
+#titulo-footer{
+    margin: 0;
+   
+}
+
+.icono-footer{
+    width: 106px;
+    margin-left: 12px;
+}
+
+
+.new{
+    background-color: black;
+}
+
+.show-contenedor{
+    background-color: black;
+}
+
+
+.seccion-boton-imagen{
+    padding: 50px 0;
+    margin-bottom: 20px;
+}
+
+.parrafo-servicios{
+    margin-top: 100px;
+}
+
+
+.container-login{
+    background-color: black;
+}
+
+#header-chico{
+    min-height: 50vh;
+    max-height: 70vh;
+    margin: 0;
+
+}
+
+
+.contenedor-para-login{
+    margin-left: 0px;
+    width: 50px;
+}
+
+#titulo-con-margin{
+    margin-top: 100px;
+}

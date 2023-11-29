@@ -1,0 +1,47 @@
+<%= turbo_frame_tag "libros_disponibles" do %>
+<div class= div3>
+    <%= form_with url: libros_search_path, method: :get, class: "formulario-busqueda" do |form|%>
+    <%= form.search_field :titulo, placeholder: "Buscar por título", value: params[:titulo]%>
+    <div class= div4>
+    <%= form.radio_button :estado, "Nuevo" , value: params[:estado]%>
+    <%= form.label :estado_nuevo, "Nuevo"%>
+    </div>
+    <div class= div4>
+    <%= form.radio_button :estado, "Usado" , value: params[:estado]%>
+    <%= form.label :estado_usado, "Usado"%>
+    </div>
+    <%= form.button "Buscar" %>
+    <% end %>
+</div>
+<section class="grid-layout">
+            <% libros_disponibles.each do |libro_disponible| %>
+            <div class="caja-index">
+                <div class="subcaja c1">
+                    
+                    <%= cl_image_tag libro_disponible.imagen.pathmap%>
+                    
+                </div>
+                <div class="subcaja">Titulo</div>
+                <div class="subcaja"><%=libro_disponible.titulo %></div>
+                <div class="subcaja">Autor</div>
+                <div class="subcaja"><%=libro_disponible.autor %></div>
+                <div class="subcaja">Estado</div>
+                <div class="subcaja"><%=libro_disponible.estado %></div>
+                <div class="subcaja">Editorial</div>
+                <div class="subcaja"><%=libro_disponible.editorial %></div>
+                <div class="subcaja">Descripción</div>
+                <div class="subcaja"><%=libro_disponible.descripcion %></div>
+                <div class="subcaja">Te interesa?</div>
+                <div class="subcaja"><%= link_to "Ver Libro", libros_mostrar_path(libro_disponible, libro_disponible.user.id), data:{turbo:"false"}, class: 'btn-2'%></div>
+                <% if can?(:update, libro_disponible) %>
+                    <div class="subcaja"><%= link_to 'Editar', edit_libro_disponible_path(libro_disponible), class: 'btn-editar' %></div>
+                <% end %>
+                <% if can?(:destroy, libro_disponible) %>
+                    <div class="subcaja"><%= link_to 'Eliminar', libro_disponible, method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'btn-eliminar' %></div>
+                <% end %>
+                
+            </div> 
+            
+            <% end %>
+</section>
+<% end %>

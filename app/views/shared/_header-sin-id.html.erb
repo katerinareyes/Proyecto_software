@@ -1,0 +1,42 @@
+<header class="header">
+        
+        <div class="menu container">
+            <input type="checkbox" id="logo-icono" />
+            <label for="logo-icono">
+                <%= image_tag('portadainicio.png', alt: 'Portada de Inicio', class: 'icono') %>
+            </label>
+
+            <input type="checkbox" id="menu" />
+            <label for="menu" id="label-menu">
+                <img src="imagenes/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li class="opcion"><p><%= link_to_unless(current_user.nil?, "Inicio", "/pages", class:'btn primary') %></p></li>
+                    <li class="opcion"><p><%= link_to_unless(current_user.nil?, "Productos", libros_index_sin_sesion_path, class: 'btn primary')%></p>
+                        <ul>
+                            <li class="sub-opcion"><p><%= link_to_unless(current_user.nil?, "Libros", libros_index_sin_sesion_path, class: 'btn primary')%></p></li>
+                            <li class="sub-opcion"><p><%= link_to_unless(current_user.nil?, "Juegos", juegos_index_sin_sesion_path, class: 'btn primary')%></p></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="opcion"><p><%= link_to_unless(current_user.nil?, "Soporte", "/soporte", class: 'btn primary')%></p></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            
+            <h1>Cambia Libros</h1>
+            <p>
+                Sumérgete en el emocionante mundo de los intercambios de libros
+                y juegos de mesa, donde la pasión por la lectura y la diversión
+                se encuentran. En CambiaLibros, creamos un espacio acogedor
+                y vibrante para que los amantes de los libros y los entusiastas de
+                los juegos de mesa se conecten, intercambien tesoros y expandan 
+                sus colecciones de una manera única y emocionante.
+            </p>
+            <a href="#" class="btn-1">Informacion</a>
+        </div>
+</header>

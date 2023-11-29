@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiaLibros</title>
+</head>
+<body>
+    <main>
+        <header>
+        </header>
+        <section id="encabezado">
+            <h1 id="title">C⃣   a⃣   m⃣   b⃣   i⃣   a⃣   L⃣   i⃣   b⃣   r⃣   o⃣   s⃣</h1>
+            <ul class="menu">
+                <li><%= link_to "Inicio", "/pages", class: 'btn primary'%></li>
+                <li><%= link_to "Libros", libros_index_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Juegos", juegos_index_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Inventario", users_show_productos_path(current_user.id) , class: 'btn primary'%></li>
+                <li><%= link_to "Publicar libro", libros_new_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Publicar juego", juegos_new_path(current_user.id) , class: 'btn primary'%></li>
+                <li><%= link_to "Solicitudes Pendientes", solicituds_index_pendientes_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Historial de Solicitudes", solicituds_index_ar_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Tus Reseñas", resenas_index_path(current_user.id), class: "btn primary"%></li>
+                <li><%= link_to "Soporte", "/soporte" , class: 'btn primary'%></li>
+                <li><%= link_to "Tu Cuenta", users_show_path(current_user.id), class: 'btn primary'%></li>
+            </ul>
+        </section>
+        <section class="seccion-subtitulo">
+        <h2 id="subtitulo">Tus reseñas</h2>
+        </section>
+        <section class="seccion-subtitulo">
+        <h2 id="subtitulo">Reseñas recibidas</h2>
+        </section>
+        <section class="seccion-tabla">
+            <table>
+                <thead>
+                <tr>
+                <th>Te dejó una reseña:</th>
+                <th>Calificación</th> 
+                <th>Comentarios</th>              
+                </tr>
+                </thead>
+            <% @resenas_recibidas.each do |resena_recibida| %>
+            <tr>
+            <td><%= User.find(resena_recibida.usuario_creador_id).nombre %></td>
+            <td><%= resena_recibida.calificacion %>/5</td>
+            <td><%= resena_recibida.comentario %></td>
+            </tr>   
+            <% end %>
+            </table>
+        </section>
+        <section class="seccion-subtitulo">
+        <h2 id="subtitulo">Reseñas publicadas</h2>
+        </section>
+        <section class="seccion-tabla">
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Le dejaste una reseña:</th>
+                        <th>Calificación</th>
+                        <th>Comentarios</th>
+                        <th>Te equivocaste?</th>
+                        <th>Te arrepentiste?</th>
+                    </tr>
+                </thead>   
+                    <% @resenas_creadas.each do |resena_creada|%>
+                    <tr>
+                    <td><%= User.find(resena_creada.usuario_receptor_id).nombre%></td>
+                    <td><%= resena_creada.calificacion%>/5</td>
+                    <td><%= resena_creada.comentario %></td>
+                    <td><%= link_to "Editar reseña", resenas_edit_path(current_user.id, resena_creada.id), class:"btn-2"%></td>
+                    <td><%= link_to "Eliminar", resenas_destroy_path(resena_creada.id), data:{turbo_method: :delete, turbo_confirm:"Estás seguro?"}, class:"btn-2"%></td>
+                    </tr>   
+                    <% end %>
+
+            </table>
+
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
+            
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

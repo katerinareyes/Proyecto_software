@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiaLibros</title>
+</head>
+<body>
+    
+    <%= render 'shared/header' %>
+    <section class="new">
+            <section class="seccion-subtitulo">
+                <section class="general" id="general-libros">
+                    <div class="general-1" id="general-1-libros">
+                        <h2>Este es tu Juego!</h2>
+                        <p>
+                            Desde acá puedes publicar un juego. Basta solo con introducir cada uno de los requerimientos que se solicitan en cada campo.
+                            Se conciente que los datos que introduzcan seran con los que aparecera tu producto a los demás usuarios.
+                            Para mayor información, puedes consultar nuestras preguntas frecuentes.
+                        </p>
+                        <a href="#" class="btn-1">Informacion</a>
+                    </div>
+                    <div class="general-2" id="general-2-libros">
+                        <section class="seccion-formulario">
+                            <div class="show-contenedor">
+                            <section class="seccion-subtitulo">
+                                <div class="caja-juego-show">
+                                    <div class="subcaja c1"><%= cl_image_tag @juego.imagen.pathmap%></div>
+                                    <div class="subcaja">Tipo</div>
+                                    <div class="subcaja"><%= @juego.tipo %></div>
+                                    <div class="subcaja">Estado</div>
+                                    <div class="subcaja"><%= @juego.estado %></div>
+                                    <div class="subcaja">N° jugadores</div>
+                                    <div class="subcaja"><%= @juego.cant_jugadores %></div>
+                                    <div class="subcaja">Descripción</div>
+                                    <div class="subcaja"><%= @juego.descripcion %></div>
+                                </div>
+                            </section>
+                            <section class="seccion-subtitulo">
+                                <h2 id="subtitulo">Acciones</h2>
+                            </section>    
+                            <section class="seccion-subtitulo">
+                                <section class="caja-botones">
+                                    <div class="subcaja"><%= link_to "Actualizar", juegos_edit_path(current_user.id, @juego.id), class:"btn-3"%></div>
+                                    <div class="subcaja"><%= link_to "Eliminar",  juegos_destroy_path(current_user.id, @juego.id), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-3" %></div>
+                                </section>
+                            </section>
+                            </div>
+                        </section>
+                    </div>
+            </section>
+            
+
+
+    
+ 
+        
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+one:
+  nombre: Monopoly
+  estado: Juegos de Negocios
+  estado: Nuevo
+  cant_jugadores: 4
+  descripcion: Monopoliza al mercado
+  imagen: imagen
+  user: diego
+
+two:
+  estado: MyString

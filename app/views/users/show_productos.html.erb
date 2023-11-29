@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiaLibros</title>
+</head>
+<body>
+        <%= render 'shared/header-chico' %>
+
+      
+        
+        <section class="general">
+            <div class="general-1">
+                <h2>Inventario</h2>
+                <p>
+                La sección de Inventario te permite visualizar y gestionar los artículos 
+                que has listado para intercambiar en nuestra plataforma. Aquí encontrarás una
+                 descripción detallada de cada artículo que has publicado, incluyendo 
+                 información sobre su estado, preferencias de intercambio y cualquier
+                  detalle adicional que hayas proporcionado. Esta función te brinda
+                   una vista clara de los elementos que has compartido con la comunidad,
+                    permitiéndote editar, actualizar o retirar tus listados según sea 
+                    necesario. Además, podrás acceder fácilmente a la información de
+                     contacto de otros usuarios interesados en tus artículos,
+                      facilitando así la comunicación y negociación para realizar 
+                      intercambios exitosos.
+                </p>
+            </div>
+            <div class="general-2"></div>
+        </section>
+
+        <section class="seccion-tabla">
+            <table>
+                <thead>
+                <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Estado</th>
+                <th>N° Páginas</th>
+                <th>Edición</th>
+                <th>Editorial</th>
+                <th>Tapa</th>
+                <th>Descripción</th>
+                <th>Disponibilidad</th> 
+                <th>Ver Libro</th>  
+                                 
+                </tr>
+                </thead>
+            <% @libros_propios.each do |libro_propio| %>
+            <tr>
+            <td><%= libro_propio.titulo %></td>
+            <td><%= libro_propio.autor %></td>
+            <td><%= libro_propio.estado %></td>
+            <td><%= libro_propio.paginas %></td>
+            <td><%= libro_propio.edicion %></td>
+            <td><%= libro_propio.editorial %></td>
+            <td><%= libro_propio.tapa %></td>
+            <td><%= libro_propio.descripcion %></td>
+            <td><%= libro_propio.disponibilidad %></td>
+            <td><%= link_to "Ver Libro", libros_show_path(current_user.id, libro_propio), class: 'btn-2'%></td>
+            </tr>   
+            <% end %>
+            </table>
+        </section>
+
+        <section class="general">
+            <div class="general-3"></div>
+            <div class="general-1">
+            <h2>¿Te cuesta Leer?</h2>
+            <p>
+                Para leer varios libros y establecer una rutina efectiva,
+                 elige diferentes géneros para variar tus lecturas, asigna momentos específicos del
+                  día para leer, como por la mañana o antes de dormir, y establece metas
+                   diarias o semanales para mantenerte enfocado y motivado. También, 
+                   experimenta con formatos de lectura, como audiolibros durante tus 
+                   desplazamientos. La clave está en encontrar un equilibrio que se 
+                   adapte a tu estilo de vida y preferencias.
+            
+            </div>
+        </section>
+
+        <section class="seccion-tabla">
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Estado</th>
+                        <th>N° Jugadores</th>
+                        <th>Descripción</th>
+                        <th>Disponibilidad</th>
+                        <th>Ver Juego</th>
+                    </tr>
+                </thead>   
+                    <% @juegos_propios.each do |juego_propio|%>
+                    <tr>
+                    <td><%= juego_propio.nombre %></td>
+                    <td><%= juego_propio.tipo %></td>
+                    <td><%= juego_propio.estado %></td>
+                    <td><%= juego_propio.cant_jugadores %></td>
+                    <td><%= juego_propio.descripcion %></td>
+                    <td><%= juego_propio.disponibilidad %></td> 
+                    <td><%= link_to "Ver Juego", juegos_show_path(current_user.id, juego_propio), class: 'btn-2'%></td>
+                    </tr>   
+                    <% end %>
+            </table>
+
+        </section>
+</body>
+</html>

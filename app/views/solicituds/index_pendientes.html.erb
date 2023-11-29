@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiaLibros</title>
+</head>
+<body>
+    <main>
+        <header>
+        </header>
+        <section id="encabezado">
+            <h1 id="title">C⃣   a⃣   m⃣   b⃣   i⃣   a⃣   L⃣   i⃣   b⃣   r⃣   o⃣   s⃣</h1>
+            <ul class="menu">
+                <li><%= link_to "Inicio", "/pages", class: 'btn primary'%></li>
+                <li><%= link_to "Libros", libros_index_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Juegos", juegos_index_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Inventario", users_show_productos_path(current_user.id) , class: 'btn primary'%></li>
+                <li><%= link_to "Publicar libro", libros_new_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Publicar juego", juegos_new_path(current_user.id) , class: 'btn primary'%></li>
+                <li><%= link_to "Solicitudes Pendientes", solicituds_index_pendientes_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Historial de Solicitudes", solicituds_index_ar_path(current_user.id), class: 'btn primary'%></li>
+                <li><%= link_to "Tus Reseñas", resenas_index_path(current_user.id), class: "btn primary"%></li>
+                <li><%= link_to "Soporte", "/soporte" , class: 'btn primary'%></li>
+                <li><%= link_to "Tu Cuenta", users_show_path(current_user.id), class: 'btn primary'%></li>
+            </ul>
+        </section>
+        <section class="seccion-subtitulo">
+        <h2 id="subtitulo" Aquí encontrarás todas tus solicitudes>
+        </section>
+        <section class="seccion-subtitulo">
+        <h2 id="subtitulo">Solicitudes de Intercambio Realizadas</h2>
+        </section>
+        <section class="seccion-tabla">
+            <table>
+                <thead>
+                <tr>
+                <th>Solicitaste el siguiente producto:</th>
+                <th>Ofreciste el siguiente producto:</th>   
+                <th>Contáctate</th> 
+                <th>Estado de la solicitud</th>    
+                <th>Te equivocaste?</th>
+                <th>Te arrepentiste?</th>  
+                </tr>
+                </thead>
+
+            <% @info_solicitudes_realizadas.each do |info_solicitud_realizada| %>
+            <tr>
+            <td><%= info_solicitud_realizada[1]%></td>
+            <td><%= info_solicitud_realizada[3]%></td>
+            <td> Chatea con <%=info_solicitud_realizada[2].nombre%></td>
+            <td><%= info_solicitud_realizada[0]%></td>
+            <td><%= link_to "Editar solicitud", solicituds_edit_path(current_user.id, info_solicitud_realizada[5]), class:"btn-2"%></td>
+            <td><%= link_to "Eliminar solicitud", solicituds_destroy_path(current_user.id, info_solicitud_realizada[5]), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-2"%></td>
+            </tr>
+            <% end %>
+            </table>
+        </section>
+
+        <section class="seccion-subtitulo">
+        <h2 id="subtitulo">Solicitudes de Intercambio Recibidas</h2>
+        </section>
+        <section class="seccion-tabla">
+            <table>
+                <thead>
+                <tr>
+                <th>Solicitaron tu producto:</th>
+                <th>Te ofrecen el siguiente producto:</th>   
+                <th>Contáctate</th> 
+                <th>Estado de la solicitud</th>  
+                <th>Te interesa?</th>   
+                <th>No te interesa?</th>              
+                </tr>
+                </thead>
+            <% @info_solicitudes_recibidas.each do |info_solicitud_recibida| %>
+            <tr>
+                <td><%= info_solicitud_recibida[1] %></td>
+                <td><%= info_solicitud_recibida[3] %></td>
+                <td>Chatea con <%= info_solicitud_recibida[4].nombre%></td>
+                <td><%=info_solicitud_recibida[0] %></td>
+                <%@solicitud = Solicitud.find(info_solicitud_recibida[5])%>
+                <td><%= form_with model: @solicitud, url: solicituds_update_ar_path(current_user.id, @solicitud.id) do |form|%>
+                <%= form.hidden_field :estado, value:"Aceptada"%>
+                <%= form.hidden_field :solicitable_type, value:@solicitud.solicitable_type%>
+                <%= form.hidden_field :solicitable_id, value:@solicitud.solicitable_id%>
+                <%= form.hidden_field :ofreciable_type, value:@solicitud.ofreciable_type%>
+                <%= form.hidden_field :ofreciable_id, value:@solicitud.ofreciable_id%>
+                <%= form.button "Aceptar Solicitud", type: :submit, class:"btn-4"%>
+                <% end %></td>
+                
+                <td><%= form_with model: @solicitud, url: solicituds_update_ar_path(current_user.id, @solicitud.id) do |form|%>
+                <%= form.hidden_field :estado, value:"Rechazada"%>
+                <%= form.hidden_field :solicitable_type, value:@solicitud.solicitable_type%>
+                <%= form.hidden_field :solicitable_id, value:@solicitud.solicitable_id%>
+                <%= form.hidden_field :ofreciable_type, value:@solicitud.ofreciable_type%>
+                <%= form.hidden_field :ofreciable_id, value:@solicitud.ofreciable_id%>
+                <%= form.button "Rechazar Solicitud", type: :submit, class:"btn-4"%>
+                <% end %></td>
+            </tr>
+            <% end %>
+            </table>
+            
+        </section>
+    </main>
+</body>
+

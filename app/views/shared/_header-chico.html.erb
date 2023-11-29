@@ -1,0 +1,67 @@
+
+
+
+<header class="header" id="header-chico">
+        
+        <div class="menu container">
+            <div class="contenedor-para-login">
+      
+        <ul>
+        <% if user_signed_in? %>
+          <li><p>Logged in as <%= current_user.nombre %></p></li>
+          <li><p><%= button_to "Edit", edit_user_registration_path %></p></li>
+          <li><p><%= button_to "Sign out", destroy_user_session_path, method: :delete %></p></li>
+        
+        <% else %>
+          <li><%= button_to "Sign in", new_user_session_path %></li>
+          <li><%= button_to "Sign up", new_user_registration_path %></li>
+        <% end %>
+      
+        <% if flash[:notice] %>
+          <li><p class="notice"><%= flash[:notice] %></p></li>
+        <% end %>
+
+        <% if flash[:alert] %>
+          <li><p class="alert"><%= flash[:alert] %></p></li>
+        <% end %>
+
+      </ul>
+      </div>
+        
+            
+            
+            
+            <nav class="navbar">
+                <ul>
+                    <li class="opcion"><p><%= link_to_unless(current_user.nil?, "Inicio", "/pages", class:'btn primary') %></p></li>
+                    <li class="opcion"><p><%= link_to_unless(current_user.nil?, "Productos", libros_index_path(current_user.id), class: 'btn primary')%></p>
+                        <ul>
+                            <li class="sub-opcion"><p><%= link_to_unless(current_user.nil?, "Libros", libros_index_path(current_user.id), class: 'btn primary')%></p></li>
+                            <li class="sub-opcion"><p><%= link_to_unless(current_user.nil?, "Juegos", juegos_index_path(current_user.id), class: 'btn primary')%></p></li>
+                            <li class="sub-opcion"><p><%= link_to "Inventario", users_show_productos_path(current_user.id) , class: 'btn primary'%></p></li>
+                        </ul>
+                    </li>
+                    <li class="opcion"><p><%= link_to "Publicar", libros_new_path(current_user.id), class: 'btn primary'%></p>
+                        <ul>
+                            <li><p><%= link_to "Libro", libros_new_path(current_user.id), class: 'btn primary'%></p></li>
+                            <li><p><%= link_to "Juego", juegos_new_path(current_user.id) , class: 'btn primary'%><p/></li>
+                        </ul>
+                    </li>
+                    <li class="opcion"><p><%= link_to "Solicitudes", libros_new_path(current_user.id), class: 'btn primary'%></p>
+                        <ul>
+                            <li><%= link_to "Pendientes", solicituds_index_pendientes_path(current_user.id), class: 'btn primary'%></li>
+                            <li><%= link_to "Historial", solicituds_index_ar_path(current_user.id), class: 'btn primary'%></li>
+                        </ul>
+                    </li>
+                    <li class="opcion"><p><%= link_to_unless(current_user.nil?, "Soporte", "/soporte", class: 'btn primary')%></p></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container" id="titulo-con-margin">
+            
+            <h1>Cambia Libros</h1>
+        </div>
+
+
+</header>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiaLibros</title>
+</head>
+<body>
+    <main>
+        <header>
+        </header>
+        <section id="encabezado">
+            <h1 id="title">C⃣   a⃣   m⃣   b⃣   i⃣   a⃣   L⃣   i⃣   b⃣   r⃣   o⃣   s⃣</h1>
+            <ul class="menu">
+                <li><p><%= link_to("Inicio", "/", class:'btn primary') %></p></li>
+                <li><p><%= link_to("Libros", libros_index_sin_sesion_path, class: 'btn primary')%></p></li>
+                <li><p><%= link_to("Juegos", juegos_index_sin_sesion_path, class: 'btn primary')%></p></li>
+            </ul>
+        </section>
+    
+        <section class="seccion-subtitulo">
+            <h2 id="subtitulo">Libros Disponibles</h2>
+        </section>
+        
+        <div>
+           <section class="grid-layout">
+            <% @libros_disponibles.each do |libro_disponible| %>
+            <div class="caja-index2">
+                <div class="subcaja c1">
+                    
+                    <%= cl_image_tag libro_disponible.imagen.pathmap%>
+                    
+                </div>
+                <div class="subcaja">Titulo</div>
+                <div class="subcaja"><%=libro_disponible.titulo %></div>
+                <div class="subcaja">Autor</div>
+                <div class="subcaja"><%=libro_disponible.autor %></div>
+                <div class="subcaja">Estado</div>
+                <div class="subcaja"><%=libro_disponible.estado %></div>
+                <div class="subcaja">Editorial</div>
+                <div class="subcaja"><%=libro_disponible.editorial %></div>
+                <div class="subcaja">Descripción</div>
+                <div class="subcaja"><%=libro_disponible.descripcion %></div>
+                
+            </div> 
+            
+            <% end %>
+</section>
+        </div>
+        
+       
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>

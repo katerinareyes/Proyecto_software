@@ -1,0 +1,67 @@
+<body style="background-color:#00695C">
+
+<section class="seccion-subtitulo-edit">
+  <h2 id="subtitulo">Edita tu perfil</h2>
+</section>
+<section class="seccion-subtitulo">
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :Nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Correo %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :"Nueva contraseña (Deja vacío si no quieres cambiar tu contraseña)" %> <br/>
+    <p>Mínimo <%= @minimum_password_length %> caracteres</p>
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :"Confirma la contraseña" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :"Constraseña actual (Ingresa tu contraseña para confirmar cambios)" %><br />
+    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  </div>
+
+  
+  <div class="field">
+    <%= f.label :Teléfono %><br />
+    <%= f.number_field :telefono %>
+  </div>
+
+  <div class="field">
+    <%= f.label :"Descripción (opcional)" %><br />
+    <%= f.text_area :descripcion %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Actualizar" %>
+  </div>
+<% end %>
+</section>
+
+<section class="seccion-subtitulo-edit">
+
+  <p>Quieres eliminar tu cuenta?</p>
+
+  <div><%= button_to "Borrar cuenta", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div><br/>
+</section>  
+
+<%= link_to "Regresar", :back , class: 'btn-3'%>
+
+</body>
