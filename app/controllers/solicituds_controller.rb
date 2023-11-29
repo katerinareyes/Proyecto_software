@@ -156,9 +156,9 @@ class SolicitudsController < ApplicationController
   def error
     @tipo_solicitado = params[:tipo_solicitado]
     if @tipo_solicitado == "Libro"
-      @path = libros_path
+      @path = libros_index_path(current_user.id)
     else
-      @path = juegos_path
+      @path = juegos_index_path(current_user.id)
     end
   end
 

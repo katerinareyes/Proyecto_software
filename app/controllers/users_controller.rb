@@ -29,6 +29,7 @@ class UsersController < ApplicationController
       juegos = user.juegos
       for juego in juegos do
         if juego.disponibilidad == "Disponible"
+          
           juegos.destroy
         end
       end
@@ -37,6 +38,14 @@ class UsersController < ApplicationController
         if libro.disponibilidad == "Disponible"
           libro.destroy
         end
+      end
+      resenas_creadas = Resena.where("usuario_creador_id =?", current_user.id)
+      resenas_recibidas = Resena.where("usuario_receptor_id =?", current_user.id)
+      for resena in resenas_creadas do
+        resena.destroy
+      end
+      for resena in resenas_recibidas do
+        resena.destroy
       end
       user.destroy
       redirect_to "/"

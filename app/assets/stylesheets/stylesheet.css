@@ -15,19 +15,7 @@ head {
     background: #ef8354;
 }
 
-p {
-    font-size: 15px;
-    padding: 10px;
-    color: #FFFDFC;
-    display: block;
-    font-weight: 600;
-}
 
-#micuenta {
-    padding: 20px 50px 20px 50px;
-    text-align: center;
-    justify-content: center;
-}
 
 #formulario {
     display: flex;
@@ -379,17 +367,36 @@ tbody tr {
 }
 
 .caja-user-show {
-    background: rgba(166, 147, 123, 0.32);
+    
     backdrop-filter: blur(100px);
     width: 40%;
     height: 50%;
     text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    
     border-radius: 15px;
     display: grid;
     grid-template-columns: 45% 55%;
     grid-template-rows: 15%, 14%, 14%, 14%, 14%, 14%, 14%;
     padding: 1px;
+    
+}
+
+#elemento-cuenta{
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.3))
+}
+
+
+#boton-eliminar{
+    margin-left: 250px;
+}
+
+.contenedor-caja-user{
+    margin-left: 170px;
+    align-items: center center;
+    padding: 50px 0;
+    
 }
 
 .caja-index {
@@ -1063,4 +1070,51 @@ h3 {
     margin-right: 50px;
     justify-content: right;
     background-color: #E1E2E6;
+}
+
+
+.info-usuario{
+
+}
+
+
+.caja-user-show{
+    padding: 100px;
+
+    width: 80%;
+    height: 80%;
+}
+
+.general-2-user{
+    width: 60%;
+    background: rgba(166, 147, 123, 0.32);
+}
+
+#general-1-user{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.7)),
+        url(foto2.jpg);
+    background-position: center bottom;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40%;
+    align-items: center;
+    margin: 0;
+
+}
+
+
+#titulo-usuario{
+    margin-left: 53px;
+    color: #323337;
+}
+
+#titulo-resenas{
+    background: none;
+}
+
+#subtitulo{
+    color: white;
+    
 }

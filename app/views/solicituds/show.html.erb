@@ -7,22 +7,7 @@
 </head>
 <body>
     <main>
-        <section id="encabezado">
-            <h1 id="title">C⃣   a⃣   m⃣   b⃣   i⃣   a⃣   L⃣   i⃣   b⃣   r⃣   o⃣   s⃣</h1>
-            <ul class="menu">
-                <li><%= link_to "Inicio", "/pages", class: 'btn primary'%></li>
-                <li><%= link_to "Libros", libros_index_path(current_user.id), class: 'btn primary'%></li>
-                <li><%= link_to "Juegos", juegos_index_path(current_user.id), class: 'btn primary'%></li>
-                <li><%= link_to "Inventario", users_show_productos_path(current_user.id) , class: 'btn primary'%></li>
-                <li><%= link_to "Publicar libro", libros_new_path(current_user.id), class: 'btn primary'%></li>
-                <li><%= link_to "Publicar juego", juegos_new_path(current_user.id), class: 'btn primary'%></li>
-                <li><%= link_to "Solicitudes Pendientes", solicituds_index_pendientes_path(current_user.id), class: 'btn primary'%></li>
-                <li><%= link_to "Historial de Solicitudes", solicituds_index_ar_path(current_user.id), class: 'btn primary'%></li>
-                <li><%= link_to "Tus Reseñas", resenas_index_path(current_user.id), class: "btn primary"%></li>
-                <li><%= link_to "Soporte", "/soporte" , class: 'btn primary'%></li>
-                <li><%= link_to "Tu Cuenta", users_show_path(current_user.id), class: 'btn primary'%></li>
-            </ul>
-        </section>
+        <%= render 'shared/header-chico' %>
         
         <section class="seccion-subtitulo">
             <h2 id="subtitulo">Tu solicitud de intercambio fue realizada exitosamente</h2>
@@ -34,14 +19,14 @@
                 <th>Estado</th>    
                 <th><%=@tipo_solicitado%> Solicitado</th>
                 <th><%=@tipo_ofrecido%> Ofrecido</th>   
-                <th>Contáctate</th>              
+                <th>Usuario</th>              
                 </tr>
                 </thead>
             <tr>
             <td><%= @solicitud.estado %></td>  
             <td><%=@nombre_solicitado%></td>
             <td><%=@nombre_ofrecido%></td> 
-            <td>Chatea con <%=@user_solicitado%></td>
+            <td> <%=@user_solicitado%></td>
             </tr>   
 
             </table>

@@ -38,7 +38,7 @@
                     <li class="opcion"><p><%= link_to "Tus Reseñas", resenas_index_path(current_user.id), class: "btn primary"%></p></li>
                     <li class="opcion"><p><%= link_to_unless(current_user.nil?, "Soporte", "/soporte", class: 'btn primary')%></p></li>
                     <li class="opcion"><p><%= link_to "Tu Cuenta", users_show_path(current_user.id), class: 'btn primary'%></p></li>
-                    <li class="opcion"><p><%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete%></p></li>
+                    <li class="opcion"><p><%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete, class: 'btn primary'%></p></li>
                 </ul>
             </nav>
         </div>

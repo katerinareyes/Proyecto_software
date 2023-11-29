@@ -20,7 +20,7 @@
                 <tr>
                 <th>Solicitaste el siguiente producto:</th>
                 <th>Ofreciste el siguiente producto:</th>   
-                <th>Contáctate</th> 
+                <th>Usuario</th> 
                 <th>Estado de la solicitud</th>    
                 <th>Te equivocaste?</th>
                 <th>Te arrepentiste?</th>  
@@ -31,7 +31,7 @@
             <tr>
             <td><%= info_solicitud_realizada[1]%></td>
             <td><%= info_solicitud_realizada[3]%></td>
-            <td> Chatea con <%=info_solicitud_realizada[2].nombre%></td>
+            <td>  <%=info_solicitud_realizada[2].nombre%></td>
             <td><%= info_solicitud_realizada[0]%></td>
             <td><%= link_to "Editar solicitud", solicituds_edit_path(current_user.id, info_solicitud_realizada[5]), class:"btn-2"%></td>
             <td><%= link_to "Eliminar solicitud", solicituds_destroy_path(current_user.id, info_solicitud_realizada[5]), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-2"%></td>

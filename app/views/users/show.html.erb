@@ -6,34 +6,45 @@
     <title>CambiaLibros</title>
 </head>
 <body>
-    <main>
-         <%= render 'shared/header-chico' %>
-        <section class="seccion-subtitulo">
-            <h2 id="subtitulo"> Perfil de <%= @usuario.nombre%></h2>
-        </section>
-        <section class="seccion-subtitulo">
+    
+    <%= render 'shared/header-chico' %>
+
+    <section class="general">
+        <div class="general-1" id="general-1-user">
+
+        </div>
+        <div class="general-2-user">
+            
+            <div class="contenedor-caja-user">
+            
+            <h3 id="titulo-usuario">Tu datos de Usuario:</h3>
+
             <div class="caja-user-show">
-                <div class="subcaja">Nombre</div>
-                <div class="subcaja"><%= @usuario.nombre %></div>
-                <div class="subcaja">Correo</div>
-                <div class="subcaja"><%= @usuario.email %></div>
-                <div class="subcaja">Teléfono</div>
-                <div class="subcaja"><%= @usuario.telefono %></div>
-                <div class="subcaja">Descripción</div>
-                <div class="subcaja"><%= @usuario.descripcion %></div>
-                <div class="subcaja">Rol</div>
-                <div class="subcaja"><%= @rol %></div>
-                <div class="subcaja">Cantidad de libros publicados</div>
-                <div class="subcaja"><%= @libros_publicados %></div>
-                <div class="subcaja">Cantidad de juegos publicados</div>
-                <div class="subcaja"><%= @juegos_publicados %></div>
+                <div class="subcaja" id="elemento-cuenta">Nombre</div>
+                <div class="subcaja" id="elemento-cuenta"><%= @usuario.nombre %></div>
+                <div class="subcaja" id="elemento-cuenta">Correo</div>
+                <div class="subcaja" id="elemento-cuenta"><%= @usuario.email %></div>
+                <div class="subcaja" id="elemento-cuenta">Teléfono</div>
+                <div class="subcaja" id="elemento-cuenta"><%= @usuario.telefono %></div>
+                <div class="subcaja" id="elemento-cuenta">Descripción</div>
+                <div class="subcaja" id="elemento-cuenta"><%= @usuario.descripcion %></div>
+                <div class="subcaja" id="elemento-cuenta">Rol</div>
+                <div class="subcaja" id="elemento-cuenta"><%= @rol %></div>
+                <div class="subcaja" id="elemento-cuenta">Cantidad de libros publicados</div>
+                <div class="subcaja" id="elemento-cuenta"><%= @libros_publicados %></div>
+                <div class="subcaja" id="elemento-cuenta">Cantidad de juegos publicados</div>
+                <div class="subcaja" id="elemento-cuenta"><%= @juegos_publicados %></div>
+                
                 
             </div>
-        </section>
-        <section class="seccion-subtitulo">
-            <%= link_to "Eliminar cuenta", users_destroy_path(current_user.id), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-5"%></div>
-        </section>
-    </main>
+            <div class="contenedor-boton-eliminar">
+                <%= link_to "Eliminar cuenta", users_destroy_path(current_user.id), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-1", id: "boton-eliminar"%></div>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+    
 
 </body>
 </html>
