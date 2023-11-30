@@ -20,7 +20,7 @@
                 <tr>
                 <th>Solicitaste el siguiente producto:</th>
                 <th>Ofreciste el siguiente producto:</th>   
-                <th>Usuario</th> 
+                <th>Usuario Oferente</th> 
                 <th>Estado de la solicitud</th>    
                 <th>Te equivocaste?</th>
                 <th>Te arrepentiste?</th>  
@@ -31,7 +31,7 @@
             <tr>
             <td><%= info_solicitud_realizada[1]%></td>
             <td><%= info_solicitud_realizada[3]%></td>
-            <td>  <%=info_solicitud_realizada[2].nombre%></td>
+            <td><%=info_solicitud_realizada[2].nombre%></td>
             <td><%= info_solicitud_realizada[0]%></td>
             <td><%= link_to "Editar solicitud", solicituds_edit_path(current_user.id, info_solicitud_realizada[5]), class:"btn-2"%></td>
             <td><%= link_to "Eliminar solicitud", solicituds_destroy_path(current_user.id, info_solicitud_realizada[5]), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-2"%></td>
@@ -49,7 +49,7 @@
                 <tr>
                 <th>Solicitaron tu producto:</th>
                 <th>Te ofrecen el siguiente producto:</th>   
-                <th>Contáctate</th> 
+                <th>Usuario Solicitante</th> 
                 <th>Estado de la solicitud</th>  
                 <th>Te interesa?</th>   
                 <th>No te interesa?</th>              
@@ -59,7 +59,7 @@
             <tr>
                 <td><%= info_solicitud_recibida[1] %></td>
                 <td><%= info_solicitud_recibida[3] %></td>
-                <td>Chatea con <%= info_solicitud_recibida[4].nombre%></td>
+                <td><%= info_solicitud_recibida[4].nombre%></td>
                 <td><%=info_solicitud_recibida[0] %></td>
                 <%@solicitud = Solicitud.find(info_solicitud_recibida[5])%>
                 <td><%= form_with model: @solicitud, url: solicituds_update_ar_path(current_user.id, @solicitud.id) do |form|%>
