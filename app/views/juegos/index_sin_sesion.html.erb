@@ -9,13 +9,13 @@
     <main>
         <%= render 'shared/header-sin-id' %>
         <section class="seccion-subtitulo">
-            <h2 id="subtitulo">Juegos Disponibles</h2>
+            <h2 id="subtitulos-portada">Juegos Disponibles</h2>
         </section>
         
         <div>
-           <section class="grid-layout">
+           <section class="grid-layout" id="sin-margin">
             <% @juegos_disponibles.each do |juego_disponible| %>
-            <div class="caja-index2">
+            <div class="caja-index2"> 
                 <div class="subcaja c1">
                     <%= cl_image_tag juego_disponible.imagen.pathmap%>
                 </div>

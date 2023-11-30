@@ -10,7 +10,7 @@
          <%= render 'shared/header-chico' %>
         <section>
             <section class="seccion-subtitulo">
-            <h2 id="subtitulo">Dejar una reseña a <%=@user_receptor.nombre%></h2>
+            <h2 id="subtitulo-portada">Dejar una reseña a <%=@user_receptor.nombre%></h2>
             </section>
             <section class="seccion-subtitulo">
             <%= form_with model: @resena, url:resenas_create_path(current_user.id, @user_receptor.id) do |form| %>

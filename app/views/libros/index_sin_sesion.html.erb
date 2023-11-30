@@ -9,11 +9,11 @@
     <main>
     <%= render 'shared/header-sin-id' %>
         <section class="seccion-subtitulo">
-            <h2 id="subtitulo">Libros Disponibles</h2>
+            <h2 id="subtitulos-portada">Libros Disponibles</h2>
         </section>
         
         <div>
-           <section class="grid-layout">
+           <section class="grid-layout"  id="sin-margin">
             <% @libros_disponibles.each do |libro_disponible| %>
             <div class="caja-index2">
                 <div class="subcaja c1">

@@ -31,7 +31,7 @@ head {
 
 .formulario-busqueda {
     width: 50%;
-    
+
 }
 
 .input-group {
@@ -79,7 +79,7 @@ textarea {
     text-shadow: 2px 2px 5px #000;
 }
 
-.inputs-secundary{
+.inputs-secundary {
     padding: 10px 20px;
     background-color: #CE967B;
 }
@@ -136,9 +136,10 @@ textarea {
     background-color: #ef8354;
 }
 
-.inputs-secundary:hover{
+.inputs-secundary:hover {
     background-color: #ebad8d;
 }
+
 .acordeon {
     background-color: #E1E2E6;
 }
@@ -356,10 +357,14 @@ tbody tr {
 
 }
 
+#sin-margin {
+    margin-top: 0;
+}
+
 .grid-layout2 {
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
-    
+
     gap: 50px;
     padding: 50px;
     background-color: #E1E2E6;
@@ -380,36 +385,36 @@ tbody tr {
 }
 
 .caja-user-show {
-    
+
     backdrop-filter: blur(100px);
     width: 40%;
     height: 50%;
     text-align: center;
-    
+
     border-radius: 15px;
     display: grid;
     grid-template-columns: 45% 55%;
     grid-template-rows: 15%, 14%, 14%, 14%, 14%, 14%, 14%;
     padding: 1px;
-    
+
 }
 
-#elemento-cuenta{
-    
+#elemento-cuenta {
+
     background: linear-gradient(rgba(0, 0, 0, 0.2),
             rgba(0, 0, 0, 0.3))
 }
 
 
-#boton-eliminar{
+#boton-eliminar {
     margin-left: 250px;
 }
 
-.contenedor-caja-user{
+.contenedor-caja-user {
     margin-left: 170px;
     align-items: center center;
     padding: 50px 0;
-    
+
 }
 
 .caja-index {
@@ -484,7 +489,7 @@ tbody tr {
 }
 
 .caja-botones {
-    
+
     backdrop-filter: blur(100px);
     width: 400px;
     height: 125px;
@@ -518,7 +523,7 @@ tbody tr {
     display: grid;
     grid-template-rows: 50% 50%;
     padding: 1px;
-    
+
 }
 
 .caja2 {
@@ -554,7 +559,7 @@ tbody tr {
     border-radius: 20px;
     color: #323337;
     max-width: 450px;
-  
+
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     background: rgba(255, 255, 255, 0.1);
     margin-bottom: 5px;
@@ -588,7 +593,7 @@ img.i2 {
     background: rgba(255, 255, 255, 0.3);
 }
 
-#acciones{
+#acciones {
     background-color: #CE967B;
 
 }
@@ -597,11 +602,11 @@ img.i2 {
     background-color: #ebad8d;
 }
 
-#subtitulo-acciones{
+#subtitulo-acciones {
     font-size: 40px;
     color: white;
     margin-top: 30px;
-    
+
 }
 
 .div2 {
@@ -883,7 +888,7 @@ img.i2 {
 .services-group {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .services-1 {
@@ -938,7 +943,7 @@ img.i2 {
 
 #general-libros {
     padding: 1px;
-    
+
 }
 
 #general-1-libros {
@@ -1050,13 +1055,13 @@ h3 {
     background: none;
 }
 
-.field{
+.field {
     text-align: center;
-   
+
 }
 
 
-.actions{
+.actions {
     text-align: center;
     margin-bottom: 100px;
     padding: 40px 0;
@@ -1104,8 +1109,8 @@ h3 {
 
 .div3 {
     display: flex;
-    justify-content: center;
-    
+
+
     margin-top: 70px;
     background-color: #E1E2E6;
     text-align: center;
@@ -1117,27 +1122,27 @@ h3 {
     max-width: 10px;
     margin-right: 0;
     background-color: #E1E2E6;
-}
-
-
-.info-usuario{
+    margin-left: 20px;
 
 }
 
 
-.caja-user-show{
+.info-usuario {}
+
+
+.caja-user-show {
     padding: 100px;
 
     width: 80%;
     height: 80%;
 }
 
-.general-2-user{
+.general-2-user {
     width: 60%;
     background: rgba(166, 147, 123, 0.32);
 }
 
-#general-1-user{
+#general-1-user {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3),
             rgba(0, 0, 0, 0.7)),
         url(foto2.jpg);
@@ -1152,72 +1157,76 @@ h3 {
 }
 
 
-#titulo-usuario{
+#titulo {
+    margin-left: 100px;
+}
+
+#titulo-usuario {
     margin-left: 53px;
     color: #323337;
 }
 
-#titulo-resenas{
+#titulo-resenas {
     background: none;
 }
 
-#subtitulo{
+#subtitulo {
     color: white;
-    
+
 }
 
-#contenedor-formulario{
+#contenedor-formulario {
     background: none;
     margin-bottom: 70px;
 }
 
 
-#titulo-producto{
+#titulo-producto {
     font-size: 30px;
 }
 
-.contenedor-h3{
+.contenedor-h3 {
     text-align: center;
 
 }
 
-#subtitulo-inicio-sesion{
+#subtitulo-inicio-sesion {
     padding: 70px 0;
 }
 
-.titulos-portada{
+.titulos-portada {
     font-size: 40px;
 }
 
 
-#titulo-seleccion{
-    background:  none;
+#titulo-seleccion {
+    background: none;
     color: black;
 }
 
-#general-3-index{
+#general-3-index {
     background: none;
     text-align: center;
 }
 
-#general-index{
+#general-index {
     max-height: 90vh;
 }
 
-#general-1-index{
+#general-1-index {
     padding: 40px;
 }
 
-.label-buscador{
+.label-buscador {
     width: 30px;
-    
+
 }
 
-.contenedor-error{
+.contenedor-error {
     padding: 200px;
     background-color: #E1E2E6;
 }
 
-#back-titulo{
+#back-titulo {
     background: none;
 }

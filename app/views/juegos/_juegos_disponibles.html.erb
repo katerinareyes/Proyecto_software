@@ -14,7 +14,7 @@
 
             <div class= div3>
                 <%= form_with url: juegos_search_path, method: :get , class: "formulario-busqueda" do |form|%>
-                <%= form.search_field :nombre, placeholder: "Buscar por nombre", value: params[:nombre]%>
+                <%= form.search_field :nombre, placeholder: "Buscar por nombre", value: params[:nombre] ,id:"titulo"%>
                 <div class= div4>
                 <%= form.radio_button :estado, "Nuevo" , value: params[:estado]%>
                 <%= form.label :estado_nuevo, "Nuevo"%>
