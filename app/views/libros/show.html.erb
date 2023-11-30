@@ -40,15 +40,21 @@
 
                                 </div>
                             </section>
+                            <% if @libro.disponibilidad == "Disponible"%>
                             <section class="seccion-subtitulo">
                                 <h2 id="subtitulo">Acciones</h2>
                             </section>    
                             <section class="seccion-subtitulo">
+                                
                                 <section class="caja-botones">
-                                    <div class="subcaja"><%= link_to "Actualizar", libros_edit_path(current_user.id, @libro.id), class:"btn-3"%></div>
-                                    <div class="subcaja"><%= link_to "Eliminar",  libros_destroy_path(current_user.id, @libro.id), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-3" %></div>
+                                    
+                                        <div class="subcaja"><%= link_to "Actualizar", libros_edit_path(current_user.id, @libro.id), class:"btn-3"%></div>
+                                        <div class="subcaja"><%= link_to "Eliminar",  libros_destroy_path(current_user.id, @libro.id), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-3" %></div>
+                                        
                                 </section>
+                                
                             </section>
+                            <%end%>
                             </div>
                         </section>
                     </div>
