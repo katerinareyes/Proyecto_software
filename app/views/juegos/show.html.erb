@@ -44,20 +44,15 @@
                                 </section>
 
                                 <section class="seccion-subtitulo" id="contenedor-formulario">
+                                    <% if @juego.disponibilidad == "Disponible"%>
                                     <section class="caja-botones">
                                     <div class="subcaja" id="acciones"><%= link_to "Actualizar", juegos_edit_path(current_user.id, @juego.id), class:"btn-3"%></div>
                                     <div class="subcaja" id="acciones"><%= link_to "Eliminar",  juegos_destroy_path(current_user.id, @juego.id), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-3" %></div>
+                                    <%end%>
                                 </section>
                                 </section>
                             </section>
-                            <% if @juego.disponibilidad == "Disponible"%>
-                            <section class="seccion-subtitulo" id="contenedor-formulario">
-                                    <section class="caja-botones">
-                                    <div class="subcaja" id="acciones"><%= link_to "Actualizar", juegos_edit_path(current_user.id, @juego.id), class:"btn-3"%></div>
-                                    <div class="subcaja" id="acciones"><%= link_to "Eliminar",  juegos_destroy_path(current_user.id, @juego.id), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-3" %></div>
-                                </section>
-                            </section>        
-                            <%end%>
+                       
                             </div>
                         </section>
                     </div>

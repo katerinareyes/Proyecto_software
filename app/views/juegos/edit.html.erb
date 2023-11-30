@@ -45,7 +45,6 @@
                     
                 </script>
             </section>
-<<<<<<< HEAD
             <br>
                             <%= form_with model: @juego, url: juegos_update_path(current_user.id, @juego.id) do |form| %>
                             <div>
@@ -104,66 +103,5 @@
         </section>
         </section>    
         
-=======
-            <br>
-            <%= form_with model: @juego, url: juegos_update_path(current_user.id, @juego.id) do |form| %>
-            <div>
-            <%= form.hidden_field :imagen, id:"imagen" %>
-            <% @juego.errors.full_messages_for(:imagen).each do |message| %>
-                <div><%= message %></div>
-                <% end %>
-            </div>
-
-            <div>
-                <%= form.label :Nombre %><br>
-                <%= form.text_field :nombre %>
-                <% @juego.errors.full_messages_for(:nombre).each do |message| %>
-                <div><%= message %></div>
-                <% end %>
-            </div>   
-
-            <div>
-                <%= form.label :Tipo %><br>
-                <%= form.text_field :tipo %>
-                <% @juego.errors.full_messages_for(:tipo).each do |message| %>
-                <div><%= message %></div>
-                <% end %>
-            </div>
-
-            <div>
-                <%= form.label :Estado %><br>
-                <%= form.select :estado, ["Nuevo", "Usado"]%>
-                <% @juego.errors.full_messages_for(:estado).each do |message| %>
-                <div><%= message %></div>
-                <% end %>
-            </div>
-
-            <div>
-                <%= form.label :"Número de jugadores" %><br>
-                <%= form.number_field :cant_jugadores %>
-                <% @juego.errors.full_messages_for(:cant_jugadores).each do |message| %>
-                <div><%= message %></div>
-                <% end %>
-            </div>
-            
-            <div>
-                <%= form.label :Descripción %><br>
-                <%= form.text_area :descripcion %>
-                <% @juego.errors.full_messages_for(:descripcion).each do |message| %>
-                <div><%= message %></div>
-                <% end %>
-            </div>
-
-            <br>
-            <%= form.submit "Actualizar" %>
-            
-            <% end %>
-            </section>
-            </div>
-        </section>
-       </section>
-    </main>
-
->>>>>>> 21812a223084f334d7aad789c99bef73c6f32a64
 </body>
 </html>
