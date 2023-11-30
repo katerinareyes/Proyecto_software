@@ -1,18 +1,34 @@
 <%= turbo_frame_tag "libros_disponibles" do %>
-<div class= div3>
-    <%= form_with url: libros_search_path, method: :get, class: "formulario-busqueda" do |form|%>
-    <%= form.search_field :titulo, placeholder: "Buscar por título", value: params[:titulo]%>
-    <div class= div4>
-    <%= form.radio_button :estado, "Nuevo" , value: params[:estado]%>
-    <%= form.label :estado_nuevo, "Nuevo"%>
-    </div>
-    <div class= div4>
-    <%= form.radio_button :estado, "Usado" , value: params[:estado]%>
-    <%= form.label :estado_usado, "Usado"%>
-    </div>
-    <%= form.button "Buscar", class: 'btn primary'%>
-    <% end %>
-</div>
+    <section class="general" id="general-index">
+        <div class="general-1" id="general-1-index">
+            <h2>Libros Disponibles</h2>
+            <p>
+                Acá veras cada uno de los libros publicados por todos los usuarios de CambiaLibros.
+                Podrás ver sus caracteristicas y descripciones e interactuar con ellos si
+                así lo deseas. También dispones de un buscardor para hacer más fácil tu busqueda!
+            </p>
+      
+        </div>
+        <div class="general-3" id="general-3-index">
+
+            <div class= div3>
+                <%= form_with url: libros_search_path, method: :get, class: "formulario-busqueda" do |form|%>
+                <%= form.search_field :titulo, placeholder: "Buscar por título", value: params[:titulo]%>
+                <div class= div4>
+                <%= form.radio_button :estado, "Nuevo" , value: params[:estado]%>
+                <%= form.label :estado_nuevo, "Nuevo", class:"label-buscador"%>
+                </div>
+                <div class= div4>
+                <%= form.radio_button :estado, "Usado" , value: params[:estado]%>
+                <%= form.label :estado_usado, "Usado", class:"label-buscador"%>
+                </div>
+                <%= form.button "Buscar", class: 'btn inputs-secundary'%>
+                <% end %>
+            </div>
+        </div>
+    </section>
+
+
 <section class="grid-layout">
             <% libros_disponibles.each do |libro_disponible| %>
             <div class="caja-index">

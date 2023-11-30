@@ -7,8 +7,8 @@
             </label>
             <nav class="navbar">
             <ul>
-                <li class="opcion"><%= link_to("Inicia sesión", new_user_session_path , class: 'btn primary')%></li>
-                <li class="opcion"><%= link_to("Registrate", new_user_registration_path, class: 'btn primary' )%></li>
+                <li class="opcion"><%= link_to("Inicia sesión", new_user_session_path , class: 'btn inputs-secundary')%></li>
+                <li class="opcion"><%= link_to("Registrate", new_user_registration_path, class: 'btn inputs-secundary' )%></li>
                 <% if flash[:notice] %>
                     <li><p class="notice"><%= flash[:notice] %></p></li>
                 <% end %>

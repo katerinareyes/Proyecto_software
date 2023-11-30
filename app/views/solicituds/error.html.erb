@@ -10,12 +10,12 @@
     <main>
         <%= render 'shared/header-chico' %>
        
-        <section>
+        <section class="contenedor-error">
             <section class="seccion-subtitulo">
-            <h2 id="subtitulo">Ups! El <%=@tipo_solicitado%> que quieres intercambiar ya te pertenece</h2>
+            <h2 id="subtitulos-portada">Ups! El <%=@tipo_solicitado%> que quieres intercambiar ya te pertenece</h2>
             </section>
             <section class="seccion-subtitulo">
-            <div class="subcaja"><%= link_to "Volver", @path, class:'btn-3'%></div>
+            <div class="subcaja"><%= link_to "Volver", @path, class:'btn inputs-secundary'%></div>
             </section>
         </section>
     </main>
