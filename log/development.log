@@ -55161,6 +55161,7 @@ Completed 404 Not Found in 85ms (ActiveRecord: 73.4ms | Allocations: 153327)
 ActiveRecord::RecordNotFound (Couldn't find Libro with 'id'=imagenes):
   
 app/controllers/libros_controller.rb:75:in `mostrar'
+<<<<<<< HEAD
 Started GET "/soporte" for ::1 at 2023-11-29 21:54:04 -0300
   [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by PagesController#soporte as HTML
@@ -55676,12 +55677,35 @@ Started GET "/imagenes/i2.svg" for ::1 at 2023-11-29 21:57:55 -0300
   
 ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
   
+=======
+Started GET "/" for 127.0.0.1 at 2023-11-30 00:54:54 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#inicial as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicial.html.erb within layouts/application
+  Rendered shared/_header-sin-id.html.erb (Duration: 150.2ms | Allocations: 67422)
+  Rendered pages/inicial.html.erb within layouts/application (Duration: 155.9ms | Allocations: 71510)
+  Rendered shared/_footer.html.erb (Duration: 1.5ms | Allocations: 586)
+  Rendered layout layouts/application.html.erb (Duration: 173.7ms | Allocations: 88469)
+Completed 200 OK in 183ms (Views: 177.2ms | ActiveRecord: 0.0ms | Allocations: 91126)
+
+
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-30 00:54:54 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-30 00:54:54 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-30 00:54:54 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+>>>>>>> 21812a223084f334d7aad789c99bef73c6f32a64
   
 ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
   
   
 ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
   
+<<<<<<< HEAD
 Started GET "/register" for ::1 at 2023-11-29 21:58:00 -0300
 Processing by Users::RegistrationsController#new as HTML
   Rendering layout layouts/application.html.erb
@@ -55804,10 +55828,61 @@ Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 9859)
 Started GET "/pages.3" for ::1 at 2023-11-29 21:58:48 -0300
 Processing by PagesController#inicio as */*
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+=======
+Started GET "/login" for 127.0.0.1 at 2023-11-30 00:54:56 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_header-sin-id.html.erb (Duration: 48.4ms | Allocations: 30824)
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 768)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 58.2ms | Allocations: 35059)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 621)
+  Rendered layout layouts/application.html.erb (Duration: 69.3ms | Allocations: 52073)
+Completed 200 OK in 91ms (Views: 71.2ms | ActiveRecord: 6.3ms | Allocations: 63241)
+
+
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-30 00:54:56 -0300
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-30 00:54:56 -0300
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-30 00:54:56 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started POST "/login" for 127.0.0.1 at 2023-11-30 00:55:01 -0300
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"kate@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar sesión"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/pages.1
+Completed 303 See Other in 227ms (ActiveRecord: 5.7ms | Allocations: 14004)
+
+
+Started GET "/pages.1" for 127.0.0.1 at 2023-11-30 00:55:01 -0300
+Processing by PagesController#inicio as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `inicio'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicio.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 3.9ms | Allocations: 3320)
+  Rendered pages/inicio.html.erb within layouts/application (Duration: 7.6ms | Allocations: 7151)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 10488)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.3ms | Allocations: 12011)
+
+
+Started GET "/pages.1" for 127.0.0.1 at 2023-11-30 00:55:01 -0300
+Processing by PagesController#inicio as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+>>>>>>> 21812a223084f334d7aad789c99bef73c6f32a64
   ↳ app/controllers/pages_controller.rb:6:in `inicio'
   Rendering layout layouts/application.html.erb
   Rendering pages/inicio.html.erb within layouts/application
   Rendered shared/_header.html.erb (Duration: 2.6ms | Allocations: 1722)
+<<<<<<< HEAD
   Rendered pages/inicio.html.erb within layouts/application (Duration: 7.5ms | Allocations: 5006)
   Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 420)
   Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 8294)
@@ -55816,20 +55891,283 @@ Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.2ms | Allocations: 945
 
 Started GET "/imagenes/i1.svg" for ::1 at 2023-11-29 21:58:48 -0300
 Started GET "/imagenes/menu.png" for ::1 at 2023-11-29 21:58:48 -0300
+=======
+  Rendered pages/inicio.html.erb within layouts/application (Duration: 5.7ms | Allocations: 5006)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 8294)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.5ms | Allocations: 9471)
+
+
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-30 00:55:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 00:55:01 -0300
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-30 00:55:01 -0300
+>>>>>>> 21812a223084f334d7aad789c99bef73c6f32a64
   
 ActionController::RoutingError (No route matches [GET] "/imagenes/menu.png"):
   
   
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
   
 Started GET "/imagenes/i2.svg" for ::1 at 2023-11-29 21:58:48 -0300
 Started GET "/imagenes/i3.svg" for ::1 at 2023-11-29 21:58:48 -0300
+=======
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-30 00:55:01 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+Started GET "/users/1/inventario" for 127.0.0.1 at 2023-11-30 00:55:04 -0300
+Processing by UsersController#show_productos as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show_productos'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show_productos.html.erb within layouts/application
+  Rendered shared/_header-chico.html.erb (Duration: 48.5ms | Allocations: 32832)
+  [1m[36mLibro Load (1.0ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:46
+  [1m[36mJuego Load (1.3ms)[0m  [1m[34mSELECT "juegos".* FROM "juegos" WHERE "juegos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:77
+  Rendered users/show_productos.html.erb within layouts/application (Duration: 76.4ms | Allocations: 50200)
+  Rendered shared/_footer.html.erb (Duration: 0.9ms | Allocations: 622)
+  Rendered layout layouts/application.html.erb (Duration: 85.8ms | Allocations: 67296)
+Completed 200 OK in 115ms (Views: 81.0ms | ActiveRecord: 9.7ms | Allocations: 85482)
+
+
+Started GET "/users/1/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 00:55:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/menu.png"):
+  
+Started GET "/users/1/imagenes/i1.svg" for 127.0.0.1 at 2023-11-30 00:55:04 -0300
+Started GET "/users/1/imagenes/i3.svg" for 127.0.0.1 at 2023-11-30 00:55:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/i1.svg"):
+  
+Started GET "/users/1/imagenes/i2.svg" for 127.0.0.1 at 2023-11-30 00:55:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/i3.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/i2.svg"):
+  
+Started GET "/users/1/libro/1" for 127.0.0.1 at 2023-11-30 00:55:11 -0300
+Processing by LibrosController#show as HTML
+  Parameters: {"user_id"=>"1", "libro_id"=>"1"}
+  [1m[36mLibro Load (0.4ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/libros_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering libros/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header-chico.html.erb:18
+  Rendered shared/_header-chico.html.erb (Duration: 5.8ms | Allocations: 4877)
+  Rendered libros/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 5712)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 422)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 9120)
+Completed 200 OK in 32ms (Views: 11.3ms | ActiveRecord: 3.0ms | Allocations: 21466)
+
+
+Started GET "/users/1/libro/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 00:55:11 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/libro/imagenes/menu.png"):
+  
+Started DELETE "/users/1/libro/delete/1" for 127.0.0.1 at 2023-11-30 00:55:15 -0300
+Processing by LibrosController#destroy as TURBO_STREAM
+  Parameters: {"user_id"=>"1", "libro_id"=>"1"}
+  [1m[36mLibro Load (0.4ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/libros_controller.rb:68:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/libros_controller.rb:69:in `destroy'
+  [1m[36mLibro Destroy (1.1ms)[0m  [1m[31mDELETE FROM "libros" WHERE "libros"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/libros_controller.rb:69:in `destroy'
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/libros_controller.rb:69:in `destroy'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/libros_controller.rb:70:in `destroy'
+Redirected to http://127.0.0.1:3000/users/1/inventario
+Completed 303 See Other in 28ms (ActiveRecord: 12.9ms | Allocations: 3682)
+
+
+Started GET "/users/1/inventario" for 127.0.0.1 at 2023-11-30 00:55:15 -0300
+Processing by UsersController#show_productos as TURBO_STREAM
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show_productos'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show_productos.html.erb within layouts/application
+  Rendered shared/_header-chico.html.erb (Duration: 1.6ms | Allocations: 2062)
+  [1m[36mLibro Load (0.4ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:46
+  [1m[36mJuego Load (2.1ms)[0m  [1m[34mSELECT "juegos".* FROM "juegos" WHERE "juegos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:77
+  Rendered users/show_productos.html.erb within layouts/application (Duration: 24.6ms | Allocations: 12401)
+  Rendered shared/_footer.html.erb (Duration: 0.8ms | Allocations: 460)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 15960)
+Completed 200 OK in 57ms (Views: 27.9ms | ActiveRecord: 6.8ms | Allocations: 21363)
+
+
+Started GET "/users/1/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 00:55:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/menu.png"):
+  
+Started GET "/users/1/solicitudes_pendientes" for 127.0.0.1 at 2023-11-30 00:55:28 -0300
+Processing by SolicitudsController#index_pendientes as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/solicituds_controller.rb:41:in `index_pendientes'
+  [1m[36mSolicitud Load (1.7ms)[0m  [1m[34mSELECT "solicituds".* FROM "solicituds"[0m
+  ↳ app/controllers/solicituds_controller.rb:5:in `index'
+  [1m[36mLibro Load (0.4ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/solicituds_controller.rb:10:in `block in index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/solicituds_controller.rb:16:in `block in index'
+  [1m[36mLibro Load (0.4ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/solicituds_controller.rb:20:in `block in index'
+Completed 404 Not Found in 28ms (ActiveRecord: 5.1ms | Allocations: 9687)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Libro with 'id'=1):
+  
+app/controllers/solicituds_controller.rb:20:in `block in index'
+app/controllers/solicituds_controller.rb:5:in `index'
+app/controllers/solicituds_controller.rb:44:in `index_pendientes'
+Started GET "/users/1/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 00:55:28 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/menu.png"):
+  
+Started GET "/users/1/inventario" for 127.0.0.1 at 2023-11-30 00:55:42 -0300
+Processing by UsersController#show_productos as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show_productos'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show_productos.html.erb within layouts/application
+  Rendered shared/_header-chico.html.erb (Duration: 2.1ms | Allocations: 1891)
+  [1m[36mLibro Load (0.5ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:46
+  [1m[36mJuego Load (0.3ms)[0m  [1m[34mSELECT "juegos".* FROM "juegos" WHERE "juegos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:77
+  Rendered users/show_productos.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3752)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 7113)
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 1.1ms | Allocations: 8425)
+
+
+Started GET "/users/1/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 00:55:42 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/menu.png"):
+  
+Started GET "/users/1/solicitudes_pendientes" for 127.0.0.1 at 2023-11-30 00:56:36 -0300
+Processing by SolicitudsController#index_pendientes as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/solicituds_controller.rb:41:in `index_pendientes'
+  [1m[36mSolicitud Load (1.5ms)[0m  [1m[34mSELECT "solicituds".* FROM "solicituds"[0m
+  ↳ app/controllers/solicituds_controller.rb:5:in `index'
+  [1m[36mLibro Load (0.2ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/solicituds_controller.rb:10:in `block in index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/solicituds_controller.rb:16:in `block in index'
+  [1m[36mLibro Load (0.3ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/solicituds_controller.rb:20:in `block in index'
+Completed 404 Not Found in 40ms (ActiveRecord: 7.6ms | Allocations: 20714)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Libro with 'id'=1):
+  
+app/controllers/solicituds_controller.rb:20:in `block in index'
+app/controllers/solicituds_controller.rb:5:in `index'
+app/controllers/solicituds_controller.rb:44:in `index_pendientes'
+Started GET "/users/1/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 00:56:36 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/menu.png"):
+  
+Started GET "/users/1/inventario" for 127.0.0.1 at 2023-11-30 00:56:39 -0300
+Processing by UsersController#show_productos as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show_productos'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show_productos.html.erb within layouts/application
+  Rendered shared/_header-chico.html.erb (Duration: 2.4ms | Allocations: 2499)
+  [1m[36mLibro Load (0.4ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:46
+  [1m[36mJuego Load (0.3ms)[0m  [1m[34mSELECT "juegos".* FROM "juegos" WHERE "juegos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:77
+  Rendered users/show_productos.html.erb within layouts/application (Duration: 22.9ms | Allocations: 11435)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 424)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 14853)
+Completed 200 OK in 38ms (Views: 24.5ms | ActiveRecord: 3.0ms | Allocations: 19901)
+
+
+Started GET "/users/1/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 00:56:39 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/menu.png"):
+  
+Started DELETE "/logout" for 127.0.0.1 at 2023-11-30 00:57:11 -0300
+Processing by Users::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 30ms (ActiveRecord: 3.3ms | Allocations: 14124)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-30 00:57:11 -0300
+Processing by PagesController#inicial as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicial.html.erb within layouts/application
+  Rendered shared/_header-sin-id.html.erb (Duration: 43.8ms | Allocations: 31082)
+  Rendered pages/inicial.html.erb within layouts/application (Duration: 47.6ms | Allocations: 35013)
+  Rendered shared/_footer.html.erb (Duration: 0.6ms | Allocations: 586)
+  Rendered layout layouts/application.html.erb (Duration: 56.4ms | Allocations: 51987)
+Completed 200 OK in 58ms (Views: 58.0ms | ActiveRecord: 0.0ms | Allocations: 53028)
+
+
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-30 00:57:11 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-30 00:57:11 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-30 00:57:11 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+Started GET "/login" for 127.0.0.1 at 2023-11-30 00:57:13 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_header-sin-id.html.erb (Duration: 1.0ms | Allocations: 1214)
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 765)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 5208)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 457)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 8745)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 10509)
+
+
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-30 00:57:13 -0300
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-30 00:57:13 -0300
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-30 00:57:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+>>>>>>> 21812a223084f334d7aad789c99bef73c6f32a64
   
 ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
   
   
 ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
   
+<<<<<<< HEAD
 Started GET "/users/3/perfil" for ::1 at 2023-11-29 21:58:54 -0300
 Processing by UsersController#show as HTML
   Parameters: {"user_id"=>"3"}
@@ -55900,11 +56238,78 @@ Processing by SolicitudsController#index_pendientes as HTML
   [1m[36mLibro Load (0.2ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/controllers/solicituds_controller.rb:10:in `block in index'
 Completed 404 Not Found in 5ms (ActiveRecord: 0.8ms | Allocations: 2061)
+=======
+Started POST "/login" for 127.0.0.1 at 2023-11-30 00:57:19 -0300
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"kate@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar sesión"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/pages.1
+Completed 303 See Other in 191ms (ActiveRecord: 0.4ms | Allocations: 4801)
+
+
+Started GET "/pages.1" for 127.0.0.1 at 2023-11-30 00:57:19 -0300
+Processing by PagesController#inicio as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `inicio'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicio.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.2ms | Allocations: 2530)
+  Rendered pages/inicio.html.erb within layouts/application (Duration: 5.5ms | Allocations: 6458)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 422)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 9853)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.4ms | Allocations: 11790)
+
+
+Started GET "/pages.1" for 127.0.0.1 at 2023-11-30 00:57:19 -0300
+Processing by PagesController#inicio as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `inicio'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/inicio.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.5ms | Allocations: 1722)
+  Rendered pages/inicio.html.erb within layouts/application (Duration: 5.6ms | Allocations: 5006)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 8294)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 9682)
+
+
+Started GET "/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 00:57:19 -0300
+Started GET "/imagenes/i1.svg" for 127.0.0.1 at 2023-11-30 00:57:19 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/menu.png"):
+  
+Started GET "/imagenes/i2.svg" for 127.0.0.1 at 2023-11-30 00:57:19 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i1.svg"):
+  
+Started GET "/imagenes/i3.svg" for 127.0.0.1 at 2023-11-30 00:57:19 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i2.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/i3.svg"):
+  
+Started GET "/users/1/solicitudes_pendientes" for 127.0.0.1 at 2023-11-30 00:57:20 -0300
+Processing by SolicitudsController#index_pendientes as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/solicituds_controller.rb:41:in `index_pendientes'
+  [1m[36mSolicitud Load (0.3ms)[0m  [1m[34mSELECT "solicituds".* FROM "solicituds"[0m
+  ↳ app/controllers/solicituds_controller.rb:5:in `index'
+  [1m[36mLibro Load (0.3ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/solicituds_controller.rb:10:in `block in index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/solicituds_controller.rb:16:in `block in index'
+  [1m[36mLibro Load (0.2ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/solicituds_controller.rb:20:in `block in index'
+Completed 404 Not Found in 8ms (ActiveRecord: 1.4ms | Allocations: 3265)
+>>>>>>> 21812a223084f334d7aad789c99bef73c6f32a64
 
 
   
 ActiveRecord::RecordNotFound (Couldn't find Libro with 'id'=1):
   
+<<<<<<< HEAD
 app/controllers/solicituds_controller.rb:10:in `block in index'
 app/controllers/solicituds_controller.rb:5:in `index'
 app/controllers/solicituds_controller.rb:44:in `index_pendientes'
@@ -62734,4 +63139,461 @@ ActionController::RoutingError (No route matches [GET] "/user/3/imagenes/menu.pn
 Started GET "/user/3/imagenes/menu.png" for ::1 at 2023-11-30 02:23:46 -0300
   
 ActionController::RoutingError (No route matches [GET] "/user/3/imagenes/menu.png"):
+=======
+app/controllers/solicituds_controller.rb:20:in `block in index'
+app/controllers/solicituds_controller.rb:5:in `index'
+app/controllers/solicituds_controller.rb:44:in `index_pendientes'
+Started GET "/users/1/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 00:57:20 -0300
+Started GET "/users/1/imagenes/i1.svg" for 127.0.0.1 at 2023-11-30 00:57:20 -0300
+Started GET "/users/1/imagenes/i2.svg" for 127.0.0.1 at 2023-11-30 00:57:20 -0300
+Started GET "/users/1/imagenes/i3.svg" for 127.0.0.1 at 2023-11-30 00:57:20 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/menu.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/i2.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/i1.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/i3.svg"):
+  
+  [1m[36mSolicitud Load (0.5ms)[0m  [1m[34mSELECT "solicituds".* FROM "solicituds"[0m
+  [1m[36mSolicitud Load (0.6ms)[0m  [1m[34mSELECT "solicituds".* FROM "solicituds"[0m
+  [1m[36mSolicitud Load (0.5ms)[0m  [1m[34mSELECT "solicituds".* FROM "solicituds" WHERE "solicituds"."ofreciable_id" = $1[0m  [["ofreciable_id", 1]]
+  [1m[36mSolicitud Load (0.5ms)[0m  [1m[34mSELECT "solicituds".* FROM "solicituds"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSolicitud Destroy (0.4ms)[0m  [1m[31mDELETE FROM "solicituds" WHERE "solicituds"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSolicitud Destroy (0.3ms)[0m  [1m[31mDELETE FROM "solicituds" WHERE "solicituds"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSolicitud Destroy (0.2ms)[0m  [1m[31mDELETE FROM "solicituds" WHERE "solicituds"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/1/solicitudes_pendientes" for 127.0.0.1 at 2023-11-30 01:04:49 -0300
+Processing by SolicitudsController#index_pendientes as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/solicituds_controller.rb:41:in `index_pendientes'
+  [1m[36mSolicitud Load (0.6ms)[0m  [1m[34mSELECT "solicituds".* FROM "solicituds"[0m
+  ↳ app/controllers/solicituds_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering solicituds/index_pendientes.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header-chico.html.erb:18
+  Rendered shared/_header-chico.html.erb (Duration: 5.5ms | Allocations: 3679)
+  Rendered solicituds/index_pendientes.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4552)
+  Rendered shared/_footer.html.erb (Duration: 0.9ms | Allocations: 581)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 8374)
+Completed 200 OK in 33ms (Views: 14.7ms | ActiveRecord: 7.2ms | Allocations: 13429)
+
+
+Started GET "/users/1/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:04:49 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/menu.png"):
+  
+Started GET "/users/1/inventario" for 127.0.0.1 at 2023-11-30 01:04:53 -0300
+Processing by UsersController#show_productos as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show_productos'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show_productos.html.erb within layouts/application
+  Rendered shared/_header-chico.html.erb (Duration: 1.9ms | Allocations: 2042)
+  [1m[36mLibro Load (0.5ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:46
+  [1m[36mJuego Load (0.3ms)[0m  [1m[34mSELECT "juegos".* FROM "juegos" WHERE "juegos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:77
+  Rendered users/show_productos.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4610)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 422)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 8021)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 1.2ms | Allocations: 9704)
+
+
+Started GET "/users/1/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:04:53 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/menu.png"):
+  
+Started GET "/users/1/libro/6" for 127.0.0.1 at 2023-11-30 01:04:58 -0300
+Processing by LibrosController#show as HTML
+  Parameters: {"user_id"=>"1", "libro_id"=>"6"}
+  [1m[36mLibro Load (0.3ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/libros_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering libros/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header-chico.html.erb:18
+  Rendered shared/_header-chico.html.erb (Duration: 3.3ms | Allocations: 3273)
+  Rendered libros/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3921)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 424)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 7330)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.7ms | Allocations: 8750)
+
+
+Started GET "/users/1/libro/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:04:58 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/libro/imagenes/menu.png"):
+  
+Started GET "/users/1/libro/6" for 127.0.0.1 at 2023-11-30 01:05:26 -0300
+Processing by LibrosController#show as HTML
+  Parameters: {"user_id"=>"1", "libro_id"=>"6"}
+  [1m[36mLibro Load (0.4ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/libros_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering libros/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header-chico.html.erb:18
+  Rendered shared/_header-chico.html.erb (Duration: 5.2ms | Allocations: 3727)
+  Rendered libros/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 4434)
+  Rendered shared/_footer.html.erb (Duration: 10.1ms | Allocations: 581)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 8260)
+Completed 200 OK in 33ms (Views: 20.5ms | ActiveRecord: 5.4ms | Allocations: 13601)
+
+
+Started GET "/users/1/libro/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:05:26 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/libro/imagenes/menu.png"):
+  
+Started GET "/users/1/libro/6" for 127.0.0.1 at 2023-11-30 01:05:56 -0300
+Processing by LibrosController#show as HTML
+  Parameters: {"user_id"=>"1", "libro_id"=>"6"}
+  [1m[36mLibro Load (0.6ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/libros_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering libros/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header-chico.html.erb:18
+  Rendered shared/_header-chico.html.erb (Duration: 6.5ms | Allocations: 3681)
+  Rendered libros/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 4371)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 581)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 8207)
+Completed 200 OK in 30ms (Views: 12.2ms | ActiveRecord: 9.8ms | Allocations: 12689)
+
+
+Started GET "/users/1/libro/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:05:56 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/libro/imagenes/menu.png"):
+  
+Started GET "/users/1/inventario" for 127.0.0.1 at 2023-11-30 01:06:06 -0300
+Processing by UsersController#show_productos as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show_productos'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show_productos.html.erb within layouts/application
+  Rendered shared/_header-chico.html.erb (Duration: 1.4ms | Allocations: 2037)
+  [1m[36mLibro Load (0.3ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:46
+  [1m[36mJuego Load (0.5ms)[0m  [1m[34mSELECT "juegos".* FROM "juegos" WHERE "juegos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:77
+  Rendered users/show_productos.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4581)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 422)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 7964)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 1.3ms | Allocations: 9603)
+
+
+Started GET "/users/1/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:06:06 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/menu.png"):
+  
+Started GET "/users/1/libro/2" for 127.0.0.1 at 2023-11-30 01:06:12 -0300
+Processing by LibrosController#show as HTML
+  Parameters: {"user_id"=>"1", "libro_id"=>"2"}
+  [1m[36mLibro Load (0.3ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/libros_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering libros/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header-chico.html.erb:18
+  Rendered shared/_header-chico.html.erb (Duration: 3.2ms | Allocations: 2777)
+  Rendered libros/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3143)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 6493)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.6ms | Allocations: 7310)
+
+
+Started GET "/users/1/libro/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:06:12 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/libro/imagenes/menu.png"):
+  
+Started GET "/users/1/inventario" for 127.0.0.1 at 2023-11-30 01:06:17 -0300
+Processing by UsersController#show_productos as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show_productos'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show_productos.html.erb within layouts/application
+  Rendered shared/_header-chico.html.erb (Duration: 2.0ms | Allocations: 1730)
+  [1m[36mLibro Load (0.4ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:46
+  [1m[36mJuego Load (0.4ms)[0m  [1m[34mSELECT "juegos".* FROM "juegos" WHERE "juegos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:77
+  Rendered users/show_productos.html.erb within layouts/application (Duration: 8.8ms | Allocations: 3587)
+Started GET "/users/1/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:06:17 -0300
+  Rendered shared/_footer.html.erb (Duration: 0.6ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 6945)
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/menu.png"):
+  
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 1.2ms | Allocations: 8206)
+
+
+Started GET "/users/1/libro/6" for 127.0.0.1 at 2023-11-30 01:06:22 -0300
+Started GET "/users/1/libro/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:06:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/libro/imagenes/menu.png"):
+  
+Processing by LibrosController#show as HTML
+  Parameters: {"user_id"=>"1", "libro_id"=>"6"}
+  [1m[36mLibro Load (0.5ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/libros_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering libros/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header-chico.html.erb:18
+  Rendered shared/_header-chico.html.erb (Duration: 12.0ms | Allocations: 4616)
+  Rendered libros/show.html.erb within layouts/application (Duration: 13.1ms | Allocations: 5349)
+  Rendered shared/_footer.html.erb (Duration: 0.8ms | Allocations: 582)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 9192)
+Completed 200 OK in 57ms (Views: 17.4ms | ActiveRecord: 10.3ms | Allocations: 23484)
+
+
+Started GET "/users/1/libro/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:06:23 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/libro/imagenes/menu.png"):
+  
+Started GET "/users/1/inventario" for 127.0.0.1 at 2023-11-30 01:07:23 -0300
+Processing by UsersController#show_productos as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show_productos'
+Started GET "/users/1/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:07:23 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/menu.png"):
+  
+  Rendering layout layouts/application.html.erb
+  Rendering users/show_productos.html.erb within layouts/application
+  Rendered shared/_header-chico.html.erb (Duration: 3.4ms | Allocations: 2494)
+  [1m[36mLibro Load (0.4ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:46
+  [1m[36mJuego Load (0.4ms)[0m  [1m[34mSELECT "juegos".* FROM "juegos" WHERE "juegos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:77
+  Rendered users/show_productos.html.erb within layouts/application (Duration: 36.6ms | Allocations: 12840)
+  Rendered shared/_footer.html.erb (Duration: 1.1ms | Allocations: 619)
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 16875)
+Completed 200 OK in 61ms (Views: 40.5ms | ActiveRecord: 5.1ms | Allocations: 22467)
+
+
+Started GET "/users/1/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:07:23 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/menu.png"):
+  
+Started GET "/users/1/juego/3" for 127.0.0.1 at 2023-11-30 01:07:26 -0300
+Processing by JuegosController#show as HTML
+  Parameters: {"user_id"=>"1", "juego_id"=>"3"}
+  [1m[36mJuego Load (0.4ms)[0m  [1m[34mSELECT "juegos".* FROM "juegos" WHERE "juegos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/juegos_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering juegos/show.html.erb within layouts/application
+  Rendered juegos/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1237)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1326)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 3518)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiaLibros</title>
+</head>
+<body>
+    
+    <%= render 'shared/header-chico' %>
+    <section class="new">
+            <section class="seccion-subtitulo">
+                <section class="general" id="general-libros">
+                    <div class="general-1" id="general-1-libros">
+                        <h2>Este es tu Juego!</h2>
+                        <p>
+
+                        </p>
+                        <a href="#" class="btn-1">Informacion</a>
+                    </div>
+                    <div class="general-2" id="general-2-libros">
+                        <section class="seccion-formulario">
+                            <div class="show-contenedor">
+                            <section class="seccion-subtitulo">
+                                <div class="caja-juego-show">
+                                    <div class="subcaja c1"><%= cl_image_tag @juego.imagen.pathmap%></div>
+                                    <div class="subcaja">Tipo</div>
+                                    <div class="subcaja"><%= @juego.tipo %></div>
+                                    <div class="subcaja">Estado</div>
+                                    <div class="subcaja"><%= @juego.estado %></div>
+                                    <div class="subcaja">N° jugadores</div>
+                                    <div class="subcaja"><%= @juego.cant_jugadores %></div>
+                                    <div class="subcaja">Descripción</div>
+                                    <div class="subcaja"><%= @juego.descripcion %></div>
+                                </div>
+                            </section>
+                            <% if @juego.disponibilidad == "Disponible"%>
+                            <section class="seccion-subtitulo">
+                                <h2 id="subtitulo">Acciones</h2>
+                            </section>    
+                            <section class="seccion-subtitulo">
+                                <section class="caja-botones">
+                                    <div class="subcaja"><%= link_to "Actualizar", juegos_edit_path(current_user.id, @juego.id), class:"btn-3"%></div>
+                                    <div class="subcaja"><%= link_to "Eliminar",  juegos_destroy_path(current_user.id, @juego.id), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-3" %></div>
+                                </section>
+                            </section>
+                            </div>
+                        </section>
+                    </div>
+            </section>
+            
+           </section> 
+
+
+    
+ 
+        
+
+</body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html lang="es">
+3:    <head>
+4:        <meta charset="UTF-8">
+5:        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6:        <title>CambiaLibros</title>
+7:    </head>
+8:    <body>
+9:        
+10:        <%= render 'shared/header-chico' %>
+11:        <section class="new">
+12:                <section class="seccion-subtitulo">
+13:                    <section class="general" id="general-libros">
+14:                        <div class="general-1" id="general-1-libros">
+15:                            <h2>Este es tu Juego!</h2>
+16:                            <p>
+17:    
+18:                            </p>
+19:                            <a href="#" class="btn-1">Informacion</a>
+20:                        </div>
+21:                        <div class="general-2" id="general-2-libros">
+22:                            <section class="seccion-formulario">
+23:                                <div class="show-contenedor">
+24:                                <section class="seccion-subtitulo">
+25:                                    <div class="caja-juego-show">
+26:                                        <div class="subcaja c1"><%= cl_image_tag @juego.imagen.pathmap%></div>
+27:                                        <div class="subcaja">Tipo</div>
+28:                                        <div class="subcaja"><%= @juego.tipo %></div>
+29:                                        <div class="subcaja">Estado</div>
+30:                                        <div class="subcaja"><%= @juego.estado %></div>
+31:                                        <div class="subcaja">N° jugadores</div>
+32:                                        <div class="subcaja"><%= @juego.cant_jugadores %></div>
+33:                                        <div class="subcaja">Descripción</div>
+34:                                        <div class="subcaja"><%= @juego.descripcion %></div>
+35:                                    </div>
+36:                                </section>
+37:                                <% if @juego.disponibilidad == "Disponible"%>
+38:                                <section class="seccion-subtitulo">
+39:                                    <h2 id="subtitulo">Acciones</h2>
+40:                                </section>    
+41:                                <section class="seccion-subtitulo">
+42:                                    <section class="caja-botones">
+43:                                        <div class="subcaja"><%= link_to "Actualizar", juegos_edit_path(current_user.id, @juego.id), class:"btn-3"%></div>
+44:                                        <div class="subcaja"><%= link_to "Eliminar",  juegos_destroy_path(current_user.id, @juego.id), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-3" %></div>
+45:                                    </section>
+46:                                </section>
+47:                                </div>
+48:                            </section>
+49:                        </div>
+50:                </section>
+51:                
+52:               </section> 
+53:    
+54:    
+55:        
+56:     
+57:            
+58:    
+59:    </body>
+60:    </html>
+  
+app/views/juegos/show.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+app/views/juegos/show.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+app/views/juegos/show.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+app/views/juegos/show.html.erb:63: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users/1/juego/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:07:27 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/juego/imagenes/menu.png"):
+  
+Started GET "/users/1/juego/3" for 127.0.0.1 at 2023-11-30 01:07:43 -0300
+Processing by JuegosController#show as HTML
+  Parameters: {"user_id"=>"1", "juego_id"=>"3"}
+  [1m[36mJuego Load (0.4ms)[0m  [1m[34mSELECT "juegos".* FROM "juegos" WHERE "juegos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/juegos_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering juegos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header-chico.html.erb:18
+  Rendered shared/_header-chico.html.erb (Duration: 5.6ms | Allocations: 3702)
+  Rendered juegos/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 4347)
+  Rendered shared/_footer.html.erb (Duration: 1.0ms | Allocations: 581)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 8186)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.8ms | Allocations: 9711)
+
+
+Started GET "/users/1/juego/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:07:43 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/juego/imagenes/menu.png"):
+  
+Started GET "/users/1/inventario" for 127.0.0.1 at 2023-11-30 01:07:47 -0300
+Processing by UsersController#show_productos as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show_productos'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show_productos.html.erb within layouts/application
+  Rendered shared/_header-chico.html.erb (Duration: 1.6ms | Allocations: 2041)
+  [1m[36mLibro Load (0.3ms)[0m  [1m[34mSELECT "libros".* FROM "libros" WHERE "libros"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:46
+  [1m[36mJuego Load (0.3ms)[0m  [1m[34mSELECT "juegos".* FROM "juegos" WHERE "juegos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show_productos.html.erb:77
+  Rendered users/show_productos.html.erb within layouts/application (Duration: 6.4ms | Allocations: 4580)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 422)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 8008)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 1.0ms | Allocations: 9668)
+
+
+Started GET "/users/1/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:07:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/imagenes/menu.png"):
+  
+Started GET "/users/1/juego/6" for 127.0.0.1 at 2023-11-30 01:07:49 -0300
+Processing by JuegosController#show as HTML
+  Parameters: {"user_id"=>"1", "juego_id"=>"6"}
+  [1m[36mJuego Load (0.6ms)[0m  [1m[34mSELECT "juegos".* FROM "juegos" WHERE "juegos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/juegos_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering juegos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header-chico.html.erb:18
+  Rendered shared/_header-chico.html.erb (Duration: 3.1ms | Allocations: 2805)
+  Rendered juegos/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3168)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 6473)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.8ms | Allocations: 7296)
+
+
+Started GET "/users/1/juego/imagenes/menu.png" for 127.0.0.1 at 2023-11-30 01:07:50 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/juego/imagenes/menu.png"):
+>>>>>>> 21812a223084f334d7aad789c99bef73c6f32a64
   

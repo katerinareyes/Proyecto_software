@@ -22,8 +22,8 @@
                 <th>Solicitaste el siguiente producto:</th>
                 <th>Ofreciste el siguiente producto:</th>   
                 <th>Estado de la solicitud</th> 
+                <th>Usuario Oferente</th>
                 <th>Deja una reseña</th> 
-                <th>Usuario</th>
                 </tr>
                 </thead>
 
@@ -32,7 +32,7 @@
             <td><%= solicitud_aceptada_realizada[1]%></td>
             <td><%= solicitud_aceptada_realizada[3]%></td>
             <td><%= solicitud_aceptada_realizada[0]%></td>
-            <td>  <%=solicitud_aceptada_realizada[2].nombre%></td>
+            <td><%=solicitud_aceptada_realizada[2].nombre%></td>
             <td><%= link_to "Dejar reseña", resenas_new_path(current_user.id, solicitud_aceptada_realizada[2].id), class: "btn-2"%></td>
             <% end %>
             </tr>
@@ -49,7 +49,7 @@
                 <th>Solicitaron tu producto:</th>
                 <th>Te ofrecieron el siguiente producto:</th>   
                 <th>Estado de la solicitud</th> 
-                <th>Usuario</th>  
+                <th>Usuario Solicitante</th>  
                 <th>Deja una reseña</th>         
                 </tr>
                 </thead>
@@ -75,7 +75,7 @@
                 <th>Solicitaste el siguiente producto:</th>
                 <th>Ofreciste el siguiente producto:</th>   
                 <th>Estado de la solicitud</th> 
-                <th>Usuario</th>  
+                <th>Usuario Oferente</th>  
                 <th>Deja una reseña</th>  
                 <th>Eliminar del historial</td>
                 </tr>
@@ -104,7 +104,7 @@
                 <th>Solicitaron tu producto:</th>
                 <th>Te ofrecieron el siguiente producto:</th>   
                 <th>Estado de la solicitud</th> 
-                <th>Usuario</th>  
+                <th>Usuario Solicitante</th>  
                 <th>Deja una reseña</th>    
                 <th>Eliminar del historial</th>          
                 </tr>
