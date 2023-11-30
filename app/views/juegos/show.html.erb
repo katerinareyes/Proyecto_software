@@ -14,15 +14,23 @@
                     <div class="general-1" id="general-1-libros">
                         <h2>Este es tu Juego!</h2>
                         <p>
-
+                            Puedes gestionar desde acá una actualización si así lo deseas. También
+                            tienes la opción de eliminar el juego de la plataforma si ya no 
+                            tienes intenciones de realizar un intercambio con este producto en
+                            particular. Ten cuidado, una vez eliminado del sistema, ya no podras 
+                            realizar más acciones con él.
                         </p>
-                        <a href="#" class="btn-1">Informacion</a>
+                        
                     </div>
                     <div class="general-2" id="general-2-libros">
                         <section class="seccion-formulario">
                             <div class="show-contenedor">
-                            <section class="seccion-subtitulo">
-                                <div class="caja-juego-show">
+                                
+                                <div class="contenedor-h3">
+                                    <h3 id="titulo-producto"><%= @juego.nombre %></h3>
+                                </div>
+                                <section class="seccion-subtitulo" id="contenedor-formulario">
+                                    <div class="caja-juego-show">
                                     <div class="subcaja c1"><%= cl_image_tag @juego.imagen.pathmap%></div>
                                     <div class="subcaja">Tipo</div>
                                     <div class="subcaja"><%= @juego.tipo %></div>
@@ -33,23 +41,24 @@
                                     <div class="subcaja">Descripción</div>
                                     <div class="subcaja"><%= @juego.descripcion %></div>
                                 </div>
-                            </section>
-                            <section class="seccion-subtitulo">
-                                <h2 id="subtitulo">Acciones</h2>
-                            </section>    
-                            <section class="seccion-subtitulo">
-                                <section class="caja-botones">
-                                    <div class="subcaja"><%= link_to "Actualizar", juegos_edit_path(current_user.id, @juego.id), class:"btn-3"%></div>
-                                    <div class="subcaja"><%= link_to "Eliminar",  juegos_destroy_path(current_user.id, @juego.id), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-3" %></div>
                                 </section>
-                            </section>
+
+                                <section class="seccion-subtitulo" id="contenedor-formulario">
+                                    <section class="caja-botones">
+                                    <div class="subcaja" id="acciones"><%= link_to "Actualizar", juegos_edit_path(current_user.id, @juego.id), class:"btn-3"%></div>
+                                    <div class="subcaja" id="acciones"><%= link_to "Eliminar",  juegos_destroy_path(current_user.id, @juego.id), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-3" %></div>
+                                </section>
+                                </section>
                             </div>
                         </section>
                     </div>
-            </section>
+                </section>
             
-           </section> 
-
+            </section>
+        </seccion>
+    
+    
+    
 
     
  

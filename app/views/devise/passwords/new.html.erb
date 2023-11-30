@@ -1,5 +1,11 @@
-<h2>Olvodaste tu constraseña?</h2>
+<body style="background-color:#00695C">
+<%= render 'shared/header-chico-sin-id' %>
 
+
+<section class="seccion-subtitulo">
+  <h2 id="subtitulo-inicio-sesion"> ¿Olvidaste tu contraseña?</h2>
+</section>
+<section class="seccion-subtitulo">
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -13,4 +19,7 @@
   </div>
 <% end %>
 
+</section>
+
 <%= render "devise/shared/links" %>
+</body>

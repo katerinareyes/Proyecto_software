@@ -7,56 +7,64 @@
 </head>
 <body>
     <%= render 'shared/header-chico' %>
-    <section class="new">
+
+        <section class="new">
             <section class="seccion-subtitulo">
                 <section class="general" id="general-libros">
                     <div class="general-1" id="general-1-libros">
                         <h2>Este es tu Libro!</h2>
                         <p>
+                            Puedes gestionar desde acá una actualización si así lo deseas. También
+                            tienes la opción de eliminar el libro de la plataforma si ya no 
+                            tienes intenciones de realizar un intercambio con este producto en
+                            particular. Ten cuidado, una vez eliminado del sistema, ya no podras 
+                            realizar más acciones con él.
                         </p>
-                        <a href="#" class="btn-1">Informacion</a>
+                        
                     </div>
                     <div class="general-2" id="general-2-libros">
                         <section class="seccion-formulario">
                             <div class="show-contenedor">
-                            <section class="seccion-subtitulo">
-                                <div class="caja-libro-show">
-                                    <div class="subcaja c1">
-                                    <%= cl_image_tag @libro.imagen.pathmap%></div>
-                                    <div class="subcaja">Autor</div>
-                                    <div class="subcaja"><%= @libro.autor %></div>
-                                    <div class="subcaja">Estado</div>
-                                    <div class="subcaja"><%= @libro.estado %></div>
-                                    <div class="subcaja">N° de páginas</div>
-                                    <div class="subcaja"><%= @libro.paginas %></div>
-                                    <div class="subcaja">Edición</div>
-                                    <div class="subcaja"><%= @libro.edicion %></div>
-                                    <div class="subcaja">Editorial</div>
-                                    <div class="subcaja"><%= @libro.editorial %></div>
-                                    <div class="subcaja">Tapa</div>
-                                    <div class="subcaja"><%= @libro.tapa %></div>
-                                    <div class="subcaja">Descripción</div>
-                                    <div class="subcaja"><%= @libro.descripcion %></div>
-
+                                
+                                <div class="contenedor-h3">
+                                    <h3 id="titulo-producto"><%= @libro.titulo %></h3>
                                 </div>
-                            </section>
-                            <section class="seccion-subtitulo">
-                                <h2 id="subtitulo">Acciones</h2>
-                            </section>    
-                            <section class="seccion-subtitulo">
-                                <section class="caja-botones">
-                                    <div class="subcaja"><%= link_to "Actualizar", libros_edit_path(current_user.id, @libro.id), class:"btn-3"%></div>
-                                    <div class="subcaja"><%= link_to "Eliminar",  libros_destroy_path(current_user.id, @libro.id), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-3" %></div>
+                                <section class="seccion-subtitulo" id="contenedor-formulario">
+                                    <div class="caja-libro-show">
+                                        <div class="subcaja c1">
+                                        <%= cl_image_tag @libro.imagen.pathmap%></div>
+                            
+                                        <div class="subcaja">Autor</div>
+                                        <div class="subcaja"><%= @libro.autor %></div>
+                                        <div class="subcaja">Estado</div>
+                                        <div class="subcaja"><%= @libro.estado %></div>
+                                        <div class="subcaja">N° de páginas</div>
+                                        <div class="subcaja"><%= @libro.paginas %></div>
+                                        <div class="subcaja">Edición</div>
+                                        <div class="subcaja"><%= @libro.edicion %></div>
+                                        <div class="subcaja">Editorial</div>
+                                        <div class="subcaja"><%= @libro.editorial %></div>
+                                        <div class="subcaja">Tapa</div>
+                                        <div class="subcaja"><%= @libro.tapa %></div>
+                                        <div class="subcaja">Descripción</div>
+                                        <div class="subcaja"><%= @libro.descripcion %></div>
+                                    </div>
                                 </section>
-                            </section>
+
+                                <section class="seccion-subtitulo" id="contenedor-formulario">
+                                    <section class="caja-botones">
+                                        <div class="subcaja" id="acciones"><%= link_to "Actualizar", libros_edit_path(current_user.id, @libro.id), class:"btn-3"%></div>
+                                        <div class="subcaja" id="acciones"><%= link_to "Eliminar",  libros_destroy_path(current_user.id, @libro.id), data:{turbo_method: :delete, turbo_confirm: "Estás seguro?"}, class:"btn-3" %></div>
+                                    </section>
+                                </section>
                             </div>
                         </section>
                     </div>
-            </section>
+                </section>
             
-        </section>
-         
-       
+            </section>
+        </seccion>
+    
 
 </body>
 </html>

@@ -2,10 +2,10 @@
 <br>
 
 
-<%= render 'shared/header-sin-id' %>
+<%= render 'shared/header-chico-sin-id' %>
 
 <section class="seccion-subtitulo">
-  <h2 id="subtitulo">Iniciar sesión</h2>
+  <h2 id="subtitulo-inicio-sesion">Iniciar sesión</h2>
 </section>
 <section class="seccion-subtitulo">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -21,8 +21,8 @@
 
   <% if devise_mapping.rememberable? %>
     <div class="field">
-      <%= f.label :recuérdame %>
-      <%= f.check_box :remember_me %>
+      <%= f.label :recuérdame, class: "boton-recuerdame" %>
+      <%= f.check_box :remember_me, class: "boton-recuerdame"%>
     </div>
   <% end %>
 

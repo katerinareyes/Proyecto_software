@@ -189,7 +189,7 @@ textarea {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 150px 0;
+    padding: 100px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -221,6 +221,7 @@ textarea {
     background-color: #E1E2E6;
     padding: 0px;
 }
+
 
 
 .seccion-tabla {
@@ -346,7 +347,7 @@ tbody tr {
 .grid-layout2 {
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
-    margin-right: 100px;
+    
     gap: 50px;
     padding: 50px;
     background-color: #E1E2E6;
@@ -470,7 +471,7 @@ tbody tr {
 }
 
 .caja-botones {
-    background: rgba(166, 147, 123, 0.32);
+    
     backdrop-filter: blur(100px);
     width: 400px;
     height: 125px;
@@ -570,6 +571,22 @@ img.i2 {
 
 .caja:hover {
     background: rgba(255, 255, 255, 0.3);
+}
+
+#acciones{
+    background-color: #CE967B;
+
+}
+
+#acciones:hover {
+    background-color: #ebad8d;
+}
+
+#subtitulo-acciones{
+    font-size: 40px;
+    color: white;
+    margin-top: 30px;
+    
 }
 
 .div2 {
@@ -851,7 +868,7 @@ img.i2 {
 .services-group {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    
 }
 
 .services-1 {
@@ -865,7 +882,7 @@ img.i2 {
 
 .services-1 h3 {
     color: #EACCB3;
-    font-size: 18px;
+    font-size: 25px;
 }
 
 
@@ -906,6 +923,7 @@ img.i2 {
 
 #general-libros {
     padding: 1px;
+    
 }
 
 #general-1-libros {
@@ -1014,10 +1032,23 @@ h3 {
 
 .new {
     background-color: black;
+    background: none;
+}
+
+.field{
+    text-align: center;
+   
+}
+
+
+.actions{
+    text-align: center;
+    margin-bottom: 100px;
+    padding: 40px 0;
 }
 
 .show-contenedor {
-    background-color: black;
+    background: none;
 }
 
 
@@ -1027,7 +1058,7 @@ h3 {
 }
 
 .parrafo-servicios {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 
@@ -1117,4 +1148,33 @@ h3 {
 #subtitulo{
     color: white;
     
+}
+
+#contenedor-formulario{
+    background: none;
+    margin-bottom: 70px;
+}
+
+
+#titulo-producto{
+    font-size: 30px;
+}
+
+.contenedor-h3{
+    text-align: center;
+
+}
+
+#subtitulo-inicio-sesion{
+    padding: 70px 0;
+}
+
+.titulos-portada{
+    font-size: 40px;
+}
+
+
+#titulo-seleccion{
+    background:  none;
+    color: black;
 }

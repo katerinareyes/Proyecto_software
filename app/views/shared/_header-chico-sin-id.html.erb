@@ -1,0 +1,36 @@
+<header class="header" id="header-chico">
+        
+        <div class="menu container">
+            <input type="checkbox" id="logo-icono" />
+            <label for="logo-icono">
+                <%= image_tag('portadainicio.png', alt: 'Portada de Inicio', class: 'icono') %>
+            </label>
+            <nav class="navbar">
+            <ul>
+                <li class="opcion"><%= link_to("Inicia sesión", new_user_session_path , class: 'btn primary')%></li>
+                <li class="opcion"><%= link_to("Registrate", new_user_registration_path, class: 'btn primary' )%></li>
+                <% if flash[:notice] %>
+                    <li><p class="notice"><%= flash[:notice] %></p></li>
+                <% end %>
+
+                <% if flash[:alert] %>
+                    <li><p class="alert"><%= flash[:alert] %></p></li>
+                <% end %>
+
+            </ul>
+            </nav>
+            
+            <input type="checkbox" id="menu" />
+            <nav class="navbar">
+                <li class="opcion"><p><%= link_to("Inicio", "/", class:'btn primary') %></p></li>
+                <li class="opcion"><p><%= link_to("Libros", libros_index_sin_sesion_path, class: 'btn primary')%></p></li>
+                <li class="opcion"><p><%= link_to("Juegos", juegos_index_sin_sesion_path, class: 'btn primary')%></p></li>
+                
+            </nav>
+        </div>
+
+        <div class="header-content container" id="titulo-con-margin">
+            
+            <h1>Cambia Libros</h1>
+        </div>
+</header>
